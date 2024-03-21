@@ -13,8 +13,13 @@ body {
 	overflow-x: hidden;
 	height: 100%;
 	user-select: none;
+	background-color: black;
 }
 
 canvas {
 	touch-action: none;
+	cursor: grab;
+}
+canvas:active {
+	cursor: grabbing;
 }
