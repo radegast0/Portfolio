@@ -1,40 +1,23 @@
-import { useRef } from 'react';
-import { useFrame, useThree } from '@react-three/fiber';
+import { Plane } from "@react-three/drei"
 
 const Background = () => {
-  const { size,mouse } = useThree();
-  const meshRef = useRef();
-  const materialRef = useRef();
-
-  useFrame(({ clock }) => {
-    const elapsedTime = clock.getElapsedTime();
-    if (materialRef.current) {
-      materialRef.current.uniforms.iTime.value = elapsedTime;
-    }
-  });
-
-
-  useFrame(() => {
-    // Calculate rotation based on mouse position
-    const mouseX = mouse.x * size.width / 32;
-    const mouseY = mouse.y * size.height / 32;
-    const targetRotationX = (mouseX / size.width) * Math.PI;
-    const targetRotationY = -(mouseY / size.height) * Math.PI;
-
-    // Rotate the mesh
-    meshRef.current.rotation.x += (targetRotationY - meshRef.current.rotation.x) * 0.05;
-    meshRef.current.rotation.y += (targetRotationX - meshRef.current.rotation.y) * 0.05;
-  });
-
   return (
     <>
-      <ambientLight intensity={1} />
-      <mesh ref={meshRef}>
-        <planeGeometry args={[10, 5]} />
-        <meshBasicMaterial color="red" />
-      </mesh>
+    <Plane args={[10,10]} position={[0,0,-6]}>
+      <meshBasicMaterial color={'hotpink'} />
+    </Plane>
+    <Plane args={[10,10]} position={[5,0,-1]} rotation={[0, -Math.PI / 2, 0]}>
+      <meshBasicMaterial color={'red'} />
+    </Plane>
+    <Plane args={[10,10]} position={[-5,0,-1]} rotation={[0, Math.PI / 2, 0]}>
+      <meshBasicMaterial color={'green'} />
+    </Plane>
+    <Plane args={[10,10]} position={[0,5,-1]} rotation={[Math.PI / 2, 0, 0]}>
+      <meshBasicMaterial color={'blue'} />
+    </Plane>
+    
     </>
-  );
-};
+  )
+}
 
-export default Background;
+export default Background
