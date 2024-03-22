@@ -5,31 +5,16 @@ import {
 	PerspectiveCamera,
 } from '@react-three/drei';
 import Background from './components/Background';
-
+import { Perf } from 'r3f-perf';
 
 const App = () => {
 	return (
 		<>
 			<Canvas
-				style={{ height: '100vh', width: '100wh', background: 'black' }}
+				style={{ height: '100vh', width: '100wh', background: '#010009' }}
 				camera={{ fov: 75 }}
 			>
-				<PerspectiveCamera
-					makeDefault
-					position={[0, 0, 10]}
-				/>
-				{/* OrbitControls */}
-				<OrbitControls
-					enablePan={false}
-					maxDistance={30}
-					minPolarAngle={Math.PI / 4}
-					maxPolarAngle={Math.PI / 2}
-					minAzimuthAngle={-Math.PI / 3}
-					maxAzimuthAngle={Math.PI / 3}
-				/>
-
-				{/* Environment */}
-				<Environment preset="sunset" />
+				<Perf />
 
 				{/* Background */}
 				<Background />
