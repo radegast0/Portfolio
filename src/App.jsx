@@ -12,6 +12,7 @@ const App = () => {
 	return (
 		<>
 			<Canvas
+				shadows
 				style={{ height: '100vh', width: '100wh' }}
 				camera={{ fov: 35 }}
 			>

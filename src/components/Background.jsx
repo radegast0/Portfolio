@@ -1,32 +1,20 @@
 import {
-	Stage,
 	PerspectiveCamera,
 	CameraControls,
 	Environment,
 } from '@react-three/drei';
 import { useFrame, useThree } from '@react-three/fiber';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import Guitar from './Guitar';
 import Room from './Room';
+import CustomEnv from './CustomEnv';
 
 const Background = () => {
 	// Load the model
-	const camera = useThree();	
+	const camera = useThree();
 
 	const { size, mouse } = useThree();
 	const groupRef = useRef();
-
-	useEffect(() => {
-		const handleResize = () => {
-			const width = window.innerWidth;
-			const height = window.innerHeight;
-			// update camera
-			camera.aspect = width / height;
-			camera.updateProjectionMatrix();
-		}
-		window.addEventListener('resize', handleResize);
-		return () => window.removeEventListener('resize', handleResize);
-	}, [camera]);
 
 	useFrame(() => {
 		// Calculate rotation based on mouse position
@@ -45,28 +33,27 @@ const Background = () => {
 
 	return (
 		<>
-			{/* <directionalLightHelper args={[dirLight.current, 0.2]} /> */}
 			{/* OrbitControls */}
-			<Environment preset='forest' />
-			<ambientLight intensity={0.5} />
+			<Environment preset="forest" />
+
 			<CameraControls
 				maxAzimuthAngle={Math.PI / 4}
 				minAzimuthAngle={-Math.PI / 4}
 				maxPolarAngle={Math.PI / 2}
 				minPolarAngle={Math.PI / 4}
 				maxDistance={5}
+				truckSpeed={0.2}
+				dispose={null}
 			/>
 			<PerspectiveCamera
-				fov={60}
+				fov={75}
 				aspect={window.innerWidth / window.innerHeight}
 				makeDefault
 				position={[0, 1.5, 1.5]}
 			/>
-			<group
-				castShadow
-				receiveShadow
-				ref={groupRef}
-			>
+
+			<group ref={groupRef}>
+				<CustomEnv />
 				{/* Custom Models here */}
 				<Guitar />
 				<Room />

@@ -15,6 +15,8 @@ export default function Guitar(props) {
             rotation={[-Math.PI / 2, 0, 0.495]}
             scale={100}>
             <mesh
+              castShadow
+              receiveShadow
               geometry={nodes.Guitar_Stand_Guitar_Stand_0.geometry}
               material={materials.Guitar_Stand}
               position={[-18.698, -34.652, 0]}
@@ -27,6 +29,8 @@ export default function Guitar(props) {
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <group position={[-12.968, -5.228, -39.37]}>
           <mesh
+            castShadow
+            receiveShadow
             geometry={nodes.Object_3001.geometry}
             material={materials['Gibson_A1_LOD001_Mat.001']}
             position={[11.031, 2.081, 41.089]}
