@@ -13,7 +13,7 @@ body {
 	overflow-x: hidden;
 	height: 100%;
 	user-select: none;
-	background-color: black;
+	background-color: '#f0f0f0';
 }
 
 canvas {

@@ -1,27 +1,37 @@
 import {
-	Plane,
 	Stage,
-	Stars,
 	PerspectiveCamera,
-	OrbitControls,
+	CameraControls,
+	Environment,
 } from '@react-three/drei';
 import { useFrame, useThree } from '@react-three/fiber';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import Guitar from './Guitar';
+import Room from './Room';
 
 const Background = () => {
-
 	// Load the model
-	
-
+	const camera = useThree();	
 
 	const { size, mouse } = useThree();
 	const groupRef = useRef();
 
+	useEffect(() => {
+		const handleResize = () => {
+			const width = window.innerWidth;
+			const height = window.innerHeight;
+			// update camera
+			camera.aspect = width / height;
+			camera.updateProjectionMatrix();
+		}
+		window.addEventListener('resize', handleResize);
+		return () => window.removeEventListener('resize', handleResize);
+	}, [camera]);
+
 	useFrame(() => {
 		// Calculate rotation based on mouse position
 		const mouseX = (mouse.x * size.width) / 32;
-		const mouseY = (mouse.y * size.height) / 64;
+		const mouseY = (mouse.y * size.height) / 128;
 		const targetRotationX = (mouseX / size.width) * Math.PI;
 		const targetRotationY = -(mouseY / size.height) * Math.PI;
 
@@ -31,72 +41,35 @@ const Background = () => {
 		groupRef.current.rotation.y +=
 			(targetRotationX - groupRef.current.rotation.y) * 0.05;
 	});
-
+	console.log(window.innerHeight, window.innerWidth);
 
 	return (
 		<>
-			<PerspectiveCamera
-				makeDefault
-				position={[0, 0, 10]}
-			/>
+			{/* <directionalLightHelper args={[dirLight.current, 0.2]} /> */}
 			{/* OrbitControls */}
-			<OrbitControls
-				enablePan={false}
-				maxDistance={30}
-				minPolarAngle={Math.PI / 4}
+			<Environment preset='forest' />
+			<ambientLight intensity={0.5} />
+			<CameraControls
+				maxAzimuthAngle={Math.PI / 4}
+				minAzimuthAngle={-Math.PI / 4}
 				maxPolarAngle={Math.PI / 2}
-				minAzimuthAngle={-Math.PI / 3}
-				maxAzimuthAngle={Math.PI / 3}
+				minPolarAngle={Math.PI / 4}
+				maxDistance={5}
 			/>
-			<Stage
-				environment="apartment"
+			<PerspectiveCamera
+				fov={60}
+				aspect={window.innerWidth / window.innerHeight}
 				makeDefault
-				adjustCamera
-				shadows={false}
+				position={[0, 1.5, 1.5]}
 			/>
-			<Stars
-				saturation={1}
-				fade
-				speed={1.5}
-			/>
-			<group ref={groupRef}>
-				<Plane
-					args={[10, 10]}
-					position={[0, 0, -6]}
-				>
-					<meshBasicMaterial color={'hotpink'} />
-				</Plane>
-				<Plane
-					args={[10, 10]}
-					position={[5, 0, -1]}
-					rotation={[0, -Math.PI / 2, 0]}
-				>
-					<meshBasicMaterial color={'red'} />
-				</Plane>
-				<Plane
-					args={[10, 10]}
-					position={[-5, 0, -1]}
-					rotation={[0, Math.PI / 2, 0]}
-				>
-					<meshBasicMaterial color={'green'} />
-					{/* side={THREE.DoubleSide} */}
-				</Plane>
-				<Plane
-					args={[10, 10]}
-					position={[0, 5, -1]}
-					rotation={[Math.PI / 2, 0, 0]}
-				>
-					<meshBasicMaterial color={'blue'} />
-				</Plane>
-				<Plane
-					args={[10, 10]}
-					position={[0, -5, -1]}
-					rotation={[-Math.PI / 2, 0, 0]}
-				>
-					<meshBasicMaterial color={'yellow'} />
-				</Plane>
-				{/* Custom Model here */}
+			<group
+				castShadow
+				receiveShadow
+				ref={groupRef}
+			>
+				{/* Custom Models here */}
 				<Guitar />
+				<Room />
 			</group>
 		</>
 	);
