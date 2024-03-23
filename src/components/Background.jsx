@@ -2,6 +2,7 @@ import {
 	PerspectiveCamera,
 	CameraControls,
 	Environment,
+	BakeShadows,
 } from '@react-three/drei';
 import { useFrame, useThree } from '@react-three/fiber';
 import { useRef } from 'react';
@@ -11,30 +12,12 @@ import CustomEnv from './CustomEnv';
 
 const Background = () => {
 	// Load the model
-	const camera = useThree();
 
-	const { size, mouse } = useThree();
 	const groupRef = useRef();
-
-	useFrame(() => {
-		// Calculate rotation based on mouse position
-		const mouseX = (mouse.x * size.width) / 32;
-		const mouseY = (mouse.y * size.height) / 128;
-		const targetRotationX = (mouseX / size.width) * Math.PI;
-		const targetRotationY = -(mouseY / size.height) * Math.PI;
-
-		// Rotate the mesh
-		groupRef.current.rotation.x +=
-			(targetRotationY - groupRef.current.rotation.x) * 0.01;
-		groupRef.current.rotation.y +=
-			(targetRotationX - groupRef.current.rotation.y) * 0.05;
-	});
-	console.log(window.innerHeight, window.innerWidth);
 
 	return (
 		<>
 			{/* OrbitControls */}
-			<Environment preset="forest" />
 
 			<CameraControls
 				maxAzimuthAngle={Math.PI / 4}

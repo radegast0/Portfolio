@@ -15,812 +15,1405 @@ export default function Room(props) {
 			dispose={null}
 		>
 			<group
+				name="Sketchfab_model"
 				rotation={[-Math.PI / 2, 0, 0]}
 				scale={0.375}
 			>
-				<group rotation={[Math.PI / 2, 0, 0]}>
+				<group
+					name="0f68dd5a072b44b1bff22f41d3a089bafbx"
+					rotation={[Math.PI / 2, 0, 0]}
+				>
 					<group
+						name="pCube155"
 						position={[-0.074, -0.179, 0.357]}
 						scale={1.063}
 					>
 						<mesh
+							name="polySurface1074_lambert2_0"
+							castShadow
+							receiveShadow
 							geometry={nodes.polySurface1074_lambert2_0.geometry}
 							material={materials.lambert2}
 						/>
 						<mesh
+							name="polySurface1075_white2_0"
+							castShadow
+							receiveShadow
 							geometry={nodes.polySurface1075_white2_0.geometry}
 							material={materials.white2}
 						/>
 						<mesh
+							name="polySurface1076_white2_0"
+							castShadow
+							receiveShadow
 							geometry={nodes.polySurface1076_white2_0.geometry}
 							material={materials.white2}
 						/>
 					</group>
 					<group
+						name="pCylinder83"
 						position={[4.337, 1.71, -1.305]}
 						scale={0.228}
 					>
 						<mesh
+							name="polySurface813_floor_0"
+							castShadow
+							receiveShadow
 							geometry={nodes.polySurface813_floor_0.geometry}
 							material={materials.floor}
 						/>
 						<mesh
+							name="polySurface813_yellow_0"
+							castShadow
+							receiveShadow
 							geometry={nodes.polySurface813_yellow_0.geometry}
 							material={materials.yellow}
 						/>
 						<mesh
+							name="polySurface814_flower_0"
+							castShadow
+							receiveShadow
 							geometry={nodes.polySurface814_flower_0.geometry}
 							material={materials.flower}
 						/>
 						<mesh
+							name="polySurface815_flower_0"
+							castShadow
+							receiveShadow
 							geometry={nodes.polySurface815_flower_0.geometry}
 							material={materials.flower}
 						/>
 						<mesh
+							name="polySurface816_flower_0"
+							castShadow
+							receiveShadow
 							geometry={nodes.polySurface816_flower_0.geometry}
 							material={materials.flower}
 						/>
 						<mesh
+							name="polySurface817_flower_0"
+							castShadow
+							receiveShadow
 							geometry={nodes.polySurface817_flower_0.geometry}
 							material={materials.flower}
 						/>
 					</group>
 					<group
+						name="polySurface142"
 						position={[2.507, -5.896, 4.115]}
 						scale={2.468}
 					>
 						<mesh
+							name="polySurface1299_sofa1_0"
+							castShadow
+							receiveShadow
 							geometry={nodes.polySurface1299_sofa1_0.geometry}
 							material={materials.sofa1}
 						/>
 						<mesh
+							name="polySurface1299_walls_0"
+							castShadow
+							receiveShadow
 							geometry={nodes.polySurface1299_walls_0.geometry}
 							material={materials.walls}
 						/>
 						<mesh
+							name="polySurface1300_lambert9_0"
+							castShadow
+							receiveShadow
 							geometry={nodes.polySurface1300_lambert9_0.geometry}
 							material={materials.lambert9}
 						/>
 						<mesh
+							name="polySurface1301_lambert9_0"
+							castShadow
+							receiveShadow
 							geometry={nodes.polySurface1301_lambert9_0.geometry}
 							material={materials.lambert9}
 						/>
 					</group>
-					<group position={[0, 0, 0.25]}>
+					<group
+						name="polySurface446"
+						position={[0, 0, 0.25]}
+					>
 						<mesh
+							name="polySurface446_lambert2_0"
+							castShadow
+							receiveShadow
 							geometry={nodes.polySurface446_lambert2_0.geometry}
 							material={materials.lambert2}
 							position={[0, 0, -0.426]}
 						/>
 					</group>
 					<mesh
+						name="pCube108_wood_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.pCube108_wood_0.geometry}
 						material={materials.wood}
 					/>
 					<mesh
+						name="polySurface584_lambert2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface584_lambert2_0.geometry}
 						material={materials.lambert2}
 					/>
 					<mesh
+						name="polySurface585_metal_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface585_metal_0.geometry}
 						material={materials.metal}
 					/>
 					<mesh
+						name="polySurface586_lambert2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface586_lambert2_0.geometry}
 						material={materials.lambert2}
 					/>
 					<mesh
+						name="polySurface587_lambert2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface587_lambert2_0.geometry}
 						material={materials.lambert2}
 					/>
 					<mesh
+						name="polySurface588_metal_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface588_metal_0.geometry}
 						material={materials.metal}
 					/>
 					<mesh
+						name="polySurface589_metal_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface589_metal_0.geometry}
 						material={materials.metal}
 					/>
 					<mesh
+						name="polySurface590_metal_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface590_metal_0.geometry}
 						material={materials.metal}
 					/>
 					<mesh
+						name="polySurface591_metal_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface591_metal_0.geometry}
 						material={materials.metal}
 					/>
 					<mesh
+						name="polySurface592_sofa1_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface592_sofa1_0.geometry}
 						material={materials.sofa1}
 					/>
 					<mesh
+						name="polySurface593_sofa1_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface593_sofa1_0.geometry}
 						material={materials.sofa1}
 					/>
 					<mesh
+						name="polySurface593_sofa_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface593_sofa_0.geometry}
 						material={materials.sofa}
 					/>
 					<mesh
+						name="pCube174_lambert1_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.pCube174_lambert1_0.geometry}
 						material={materials.lambert1}
 					/>
 					<mesh
+						name="pCube273_cloth2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.pCube273_cloth2_0.geometry}
 						material={materials.cloth2}
 					/>
 					<mesh
+						name="pCube274_lambert1_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.pCube274_lambert1_0.geometry}
 						material={materials.lambert1}
 					/>
 					<mesh
+						name="pCube289_lambert1_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.pCube289_lambert1_0.geometry}
 						material={materials.lambert1}
 					/>
 					<mesh
+						name="pCube292_lambert2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.pCube292_lambert2_0.geometry}
 						material={materials.lambert2}
 					/>
 					<mesh
+						name="pCube292_metal_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.pCube292_metal_0.geometry}
 						material={materials.metal}
 					/>
 					<mesh
+						name="pCube94_white_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.pCube94_white_0.geometry}
 						material={materials.white}
 					/>
 					<mesh
+						name="pCube96_lambert1_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.pCube96_lambert1_0.geometry}
 						material={materials.lambert1}
 					/>
 					<mesh
+						name="pCylinder49_metal_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.pCylinder49_metal_0.geometry}
 						material={materials.metal}
 					/>
 					<mesh
+						name="pCylinder70_metal_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.pCylinder70_metal_0.geometry}
 						material={materials.metal}
 					/>
 					<mesh
+						name="polySurface594_sofa1_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface594_sofa1_0.geometry}
 						material={materials.sofa1}
 					/>
 					<mesh
+						name="polySurface595_sofa1_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface595_sofa1_0.geometry}
 						material={materials.sofa1}
 					/>
 					<mesh
+						name="polySurface596_sofa1_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface596_sofa1_0.geometry}
 						material={materials.sofa1}
 					/>
 					<mesh
+						name="polySurface597_curtains_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface597_curtains_0.geometry}
 						material={materials.curtains}
 					/>
 					<mesh
+						name="polySurface598_curtains_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface598_curtains_0.geometry}
 						material={materials.curtains}
 					/>
 					<mesh
+						name="polySurface599_sofa1_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface599_sofa1_0.geometry}
 						material={materials.sofa1}
 					/>
 					<mesh
+						name="polySurface600_sofa1_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface600_sofa1_0.geometry}
 						material={materials.sofa1}
 					/>
 					<mesh
+						name="polySurface601_lambert1_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface601_lambert1_0.geometry}
 						material={materials.lambert1}
 					/>
 					<mesh
+						name="polySurface602_lambert1_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface602_lambert1_0.geometry}
 						material={materials.lambert1}
 					/>
 					<mesh
+						name="polySurface603_sofa1_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface603_sofa1_0.geometry}
 						material={materials.sofa1}
 					/>
 					<mesh
+						name="pCylinder93_sofa1_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.pCylinder93_sofa1_0.geometry}
 						material={materials.sofa1}
 					/>
 					<mesh
+						name="pDisc1_lambert1_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.pDisc1_lambert1_0.geometry}
 						material={materials.lambert1}
 					/>
 					<mesh
+						name="polySurface1064_guitar_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1064_guitar_0.geometry}
 						material={materials.guitar}
 					/>
 					<mesh
+						name="polySurface1064_sofa_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1064_sofa_0.geometry}
 						material={materials.sofa}
 					/>
 					<mesh
+						name="polySurface1064_white_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1064_white_0.geometry}
 						material={materials.white}
 					/>
 					<mesh
+						name="polySurface1073_curtains_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1073_curtains_0.geometry}
 						material={materials.curtains}
 					/>
 					<mesh
+						name="polySurface1073_metal_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1073_metal_0.geometry}
 						material={materials.metal}
 					/>
 					<mesh
+						name="polySurface1287_white_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1287_white_0.geometry}
 						material={materials.white}
 					/>
 					<mesh
+						name="polySurface1287_wood_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1287_wood_0.geometry}
 						material={materials.wood}
 					/>
 					<mesh
+						name="polySurface143_lambert1_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface143_lambert1_0.geometry}
 						material={materials.lambert1}
 						position={[0, 0, 0.283]}
 					/>
+					
 					<mesh
-						geometry={nodes.polySurface1484_lamp_0.geometry}
-						material={materials.lamp}
-					/>
-					<mesh
+						name="polySurface241_lambert2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface241_lambert2_0.geometry}
 						material={materials.lambert2}
 					/>
 					<mesh
+						name="polySurface251_gold_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface251_gold_0.geometry}
 						material={materials.gold}
 					/>
 					<mesh
+						name="polySurface437_metal_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface437_metal_0.geometry}
 						material={materials.metal}
 					/>
 					<mesh
+						name="polySurface437_white2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface437_white2_0.geometry}
 						material={materials.white2}
 					/>
 					<mesh
+						name="polySurface801_cloth2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface801_cloth2_0.geometry}
 						material={materials.cloth2}
 					/>
 					<mesh
+						name="polySurface802_cloth2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface802_cloth2_0.geometry}
 						material={materials.cloth2}
 					/>
 					<mesh
+						name="polySurface465_raff_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface465_raff_0.geometry}
 						material={materials.raff}
 					/>
 					<mesh
+						name="polySurface818_lambert2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface818_lambert2_0.geometry}
 						material={materials.lambert2}
 					/>
 					<mesh
+						name="polySurface819_white_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface819_white_0.geometry}
 						material={materials.white}
 					/>
 					<mesh
+						name="polySurface820_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface820_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface938_white_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface938_white_0.geometry}
 						material={materials.white}
 					/>
 					<mesh
+						name="polySurface939_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface939_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface492_sofa1_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface492_sofa1_0.geometry}
 						material={materials.sofa1}
 					/>
 					<mesh
+						name="polySurface493_sofa_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface493_sofa_0.geometry}
 						material={materials.sofa}
 					/>
 					<mesh
+						name="polySurface5_floor_0"
+						position={[0, -0.01, 0]}
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface5_floor_0.geometry}
 						material={materials.floor}
 					/>
 					<mesh
+						name="polySurface576_cloth_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface576_cloth_0.geometry}
 						material={materials.cloth}
 					/>
 					<mesh
+						name="polySurface576_metal_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface576_metal_0.geometry}
 						material={materials.metal}
 					/>
 					<mesh
+						name="polySurface604_cloth2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface604_cloth2_0.geometry}
 						material={materials.cloth2}
 					/>
 					<mesh
+						name="polySurface604_sofa_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface604_sofa_0.geometry}
 						material={materials.sofa}
 					/>
 					<mesh
+						name="polySurface1000_lambert2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1000_lambert2_0.geometry}
 						material={materials.lambert2}
 					/>
 					<mesh
+						name="polySurface1001_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1001_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface1002_blue_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1002_blue_0.geometry}
 						material={materials.blue}
 					/>
 					<mesh
+						name="polySurface1003_yellow_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1003_yellow_0.geometry}
 						material={materials.yellow}
 					/>
 					<mesh
+						name="polySurface1004_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1004_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface1005_yellow_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1005_yellow_0.geometry}
 						material={materials.yellow}
 					/>
 					<mesh
+						name="polySurface1006_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1006_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface1007_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1007_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface1008_blue_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1008_blue_0.geometry}
 						material={materials.blue}
 					/>
 					<mesh
+						name="polySurface1009_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1009_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface1010_white_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1010_white_0.geometry}
 						material={materials.white}
 					/>
 					<mesh
+						name="polySurface1011_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1011_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface1012_yellow_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1012_yellow_0.geometry}
 						material={materials.yellow}
 					/>
 					<mesh
+						name="polySurface1014_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1014_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface1015_yellow_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1015_yellow_0.geometry}
 						material={materials.yellow}
 					/>
 					<mesh
+						name="polySurface1016_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1016_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface1017_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1017_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface1018_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1018_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface1019_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1019_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface1020_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1020_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface1021_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1021_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface1022_blue_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1022_blue_0.geometry}
 						material={materials.blue}
 					/>
 					<mesh
+						name="polySurface1023_blue_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1023_blue_0.geometry}
 						material={materials.blue}
 					/>
 					<mesh
+						name="polySurface1024_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1024_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface1025_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1025_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface1026_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1026_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface1027_guitar_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1027_guitar_0.geometry}
 						material={materials.guitar}
 					/>
 					<mesh
+						name="polySurface1028_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1028_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface1029_lambert2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1029_lambert2_0.geometry}
 						material={materials.lambert2}
 					/>
 					<mesh
+						name="polySurface1030_blue_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1030_blue_0.geometry}
 						material={materials.blue}
 					/>
 					<mesh
+						name="polySurface1031_lambert2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1031_lambert2_0.geometry}
 						material={materials.lambert2}
 					/>
 					<mesh
+						name="polySurface1032_yellow_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1032_yellow_0.geometry}
 						material={materials.yellow}
 					/>
 					<mesh
+						name="polySurface1033_white_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1033_white_0.geometry}
 						material={materials.white}
 					/>
 					<mesh
+						name="polySurface1034_white_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1034_white_0.geometry}
 						material={materials.white}
 					/>
 					<mesh
+						name="polySurface1035_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1035_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface1036_lambert2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1036_lambert2_0.geometry}
 						material={materials.lambert2}
 					/>
 					<mesh
+						name="polySurface1037_white_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1037_white_0.geometry}
 						material={materials.white}
 					/>
 					<mesh
+						name="polySurface1038_lambert2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1038_lambert2_0.geometry}
 						material={materials.lambert2}
 					/>
 					<mesh
+						name="polySurface1039_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1039_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface1040_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1040_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface1041_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1041_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface1042_white_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1042_white_0.geometry}
 						material={materials.white}
 					/>
 					<mesh
+						name="polySurface1043_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1043_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface1044_white_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1044_white_0.geometry}
 						material={materials.white}
 					/>
 					<mesh
+						name="polySurface1045_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1045_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface1046_metal_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1046_metal_0.geometry}
 						material={materials.metal}
 					/>
 					<mesh
+						name="polySurface1047_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1047_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface1048_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1048_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface1049_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1049_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface1050_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1050_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface1051_lambert2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1051_lambert2_0.geometry}
 						material={materials.lambert2}
 					/>
 					<mesh
+						name="polySurface1052_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1052_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface1053_blue_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1053_blue_0.geometry}
 						material={materials.blue}
 					/>
 					<mesh
+						name="polySurface1054_lambert2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1054_lambert2_0.geometry}
 						material={materials.lambert2}
 					/>
 					<mesh
+						name="polySurface1055_white_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1055_white_0.geometry}
 						material={materials.white}
 					/>
 					<mesh
+						name="polySurface1056_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1056_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface1057_lambert2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1057_lambert2_0.geometry}
 						material={materials.lambert2}
 					/>
 					<mesh
+						name="polySurface1058_lambert2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface1058_lambert2_0.geometry}
 						material={materials.lambert2}
 					/>
 					<mesh
+						name="polySurface942_sofa_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface942_sofa_0.geometry}
 						material={materials.sofa}
 					/>
 					<mesh
+						name="polySurface943_sofa_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface943_sofa_0.geometry}
 						material={materials.sofa}
 					/>
 					<mesh
+						name="polySurface944_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface944_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface945_white_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface945_white_0.geometry}
 						material={materials.white}
 					/>
 					<mesh
+						name="polySurface946_lambert2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface946_lambert2_0.geometry}
 						material={materials.lambert2}
 					/>
 					<mesh
+						name="polySurface947_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface947_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface948_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface948_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface949_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface949_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface950_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface950_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface951_white_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface951_white_0.geometry}
 						material={materials.white}
 					/>
 					<mesh
+						name="polySurface952_lambert2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface952_lambert2_0.geometry}
 						material={materials.lambert2}
 					/>
 					<mesh
+						name="polySurface953_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface953_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface954_blue_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface954_blue_0.geometry}
 						material={materials.blue}
 					/>
 					<mesh
+						name="polySurface955_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface955_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface956_blue_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface956_blue_0.geometry}
 						material={materials.blue}
 					/>
 					<mesh
+						name="polySurface957_white_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface957_white_0.geometry}
 						material={materials.white}
 					/>
 					<mesh
+						name="polySurface958_white_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface958_white_0.geometry}
 						material={materials.white}
 					/>
 					<mesh
+						name="polySurface959_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface959_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface960_lambert2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface960_lambert2_0.geometry}
 						material={materials.lambert2}
 					/>
 					<mesh
+						name="polySurface961_white_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface961_white_0.geometry}
 						material={materials.white}
 					/>
 					<mesh
+						name="polySurface962_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface962_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface963_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface963_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface964_lambert2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface964_lambert2_0.geometry}
 						material={materials.lambert2}
 					/>
 					<mesh
+						name="polySurface965_guitar_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface965_guitar_0.geometry}
 						material={materials.guitar}
 					/>
 					<mesh
+						name="polySurface966_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface966_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface967_guitar_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface967_guitar_0.geometry}
 						material={materials.guitar}
 					/>
 					<mesh
+						name="polySurface968_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface968_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface969_white_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface969_white_0.geometry}
 						material={materials.white}
 					/>
 					<mesh
+						name="polySurface970_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface970_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface971_blue_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface971_blue_0.geometry}
 						material={materials.blue}
 					/>
 					<mesh
+						name="polySurface972_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface972_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface973_lambert2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface973_lambert2_0.geometry}
 						material={materials.lambert2}
 					/>
 					<mesh
+						name="polySurface974_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface974_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface975_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface975_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface976_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface976_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface977_blue_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface977_blue_0.geometry}
 						material={materials.blue}
 					/>
 					<mesh
+						name="polySurface978_white_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface978_white_0.geometry}
 						material={materials.white}
 					/>
 					<mesh
+						name="polySurface979_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface979_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface980_yellow_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface980_yellow_0.geometry}
 						material={materials.yellow}
 					/>
 					<mesh
+						name="polySurface981_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface981_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface982_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface982_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface983_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface983_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface984_blue_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface984_blue_0.geometry}
 						material={materials.blue}
 					/>
 					<mesh
+						name="polySurface985_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface985_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface986_lambert2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface986_lambert2_0.geometry}
 						material={materials.lambert2}
 					/>
 					<mesh
+						name="polySurface987_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface987_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface988_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface988_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface989_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface989_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface990_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface990_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface991_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface991_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface992_yellow_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface992_yellow_0.geometry}
 						material={materials.yellow}
 					/>
 					<mesh
+						name="polySurface993_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface993_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface994_lambert2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface994_lambert2_0.geometry}
 						material={materials.lambert2}
 					/>
 					<mesh
+						name="polySurface995_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface995_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface996_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface996_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface997_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface997_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface998_white_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface998_white_0.geometry}
 						material={materials.white}
 					/>
 					<mesh
+						name="polySurface999_wood2_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface999_wood2_0.geometry}
 						material={materials.wood2}
 					/>
 					<mesh
+						name="polySurface941_guitar_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface941_guitar_0.geometry}
 						material={materials.guitar}
 					/>
 					<mesh
+						name="polySurface941_white_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.polySurface941_white_0.geometry}
 						material={materials.white}
 					/>
 					<mesh
+						name="pPlane7_glass_0"
+						castShadow
+						receiveShadow
 						geometry={nodes.pPlane7_glass_0.geometry}
 						material={materials.glass}
 					/>
 				</group>
 			</group>
 			<mesh
+				name="polySurface549_sofa_0"
+				castShadow
+				receiveShadow
 				geometry={nodes.polySurface549_sofa_0.geometry}
 				material={materials.sofa}
 			/>
