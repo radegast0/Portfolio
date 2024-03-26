@@ -16,7 +16,7 @@ const App = () => {
 				camera={{ fov: 35 }}
 				flat
 			>
-				<Perf />
+				{/* <Perf /> */}
 
 				{/* Background */}
 				<Experience />
