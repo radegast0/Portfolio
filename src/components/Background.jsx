@@ -3,19 +3,13 @@ import {
 	useTexture,
 	PerspectiveCamera,
 	OrbitControls,
-	CameraControls,
-	useHelper,
 } from '@react-three/drei';
 import GuitarSofa from './GuitarSofa';
-import { useRef } from 'react';
 import Logos from './Logos';
 
 const Background = () => {
 	const { nodes } = useGLTF('/models/room-baked.glb');
 	const logos = useGLTF('/models/logos-book.glb');
-
-	console.log(logos);
-	console.log(nodes);
 
 	const bakedTexture = useTexture('/models/room-baked.jpg');
 
@@ -25,12 +19,20 @@ const Background = () => {
 				args={['#030202']}
 				attach="background"
 			/>
-			<ambientLight intensity={0.3} />
+			<ambientLight intensity={1.5} />
 			<PerspectiveCamera
 				makeDefault
 				position={[8, 12, 20]}
 			/>
-			<CameraControls />
+
+			<OrbitControls
+				maxDistance={35}
+				maxPolarAngle={Math.PI / 2.4}
+				minPolarAngle={Math.PI / 8}
+				minAzimuthAngle={-Math.PI / 2.4}
+				maxAzimuthAngle={Math.PI / 2.4}
+				enablePan={false}
+			/>
 
 			<mesh geometry={nodes.baked.geometry}>
 				<meshBasicMaterial

@@ -13,7 +13,7 @@ const App = () => {
 		<>
 			<Canvas
 				style={{ height: '100vh', width: '100wh' }}
-				camera={{ fov: 75 }}
+				camera={{ fov: 35 }}
 				flat
 			>
 				<Perf />
