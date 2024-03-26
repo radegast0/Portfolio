@@ -6,23 +6,9 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function Logos(props) {
-  const { nodes, materials } = useGLTF('./models/logos-book.glb')
+  const { nodes, materials } = useGLTF('./models/logos.glb')
   return (
     <group {...props} dispose={null}>
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.polySurface941_guitar_0.geometry}
-        material={materials.guitar}
-        position={[-5.718, 0.378, 0.438]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.polySurface941_white_0.geometry}
-        material={materials.white}
-        position={[-5.718, 0.378, 0.438]}
-      />
       <group position={[-5.573, 2.63, -7.695]} rotation={[1.274, 0, 0]}>
         <mesh
           castShadow
@@ -56,7 +42,7 @@ export default function Logos(props) {
           castShadow
           receiveShadow
           geometry={nodes.Curve014.geometry}
-          material={materials['Material.006']}
+          material={materials.blue}
         />
         <mesh
           castShadow
@@ -86,13 +72,10 @@ export default function Logos(props) {
         receiveShadow
         geometry={nodes.react001.geometry}
         material={materials.blue}
-        position={[-5.206, 2.506, -7.076]}
-        scale={3.944}
+        position={[-5.133, 2.506, -7.076]}
       />
     </group>
   )
 }
 
-useGLTF.preload('./models/logos-book.glb')
-
-
+useGLTF.preload('./models/logos.glb')

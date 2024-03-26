@@ -5,7 +5,7 @@ import {
 	PerspectiveCamera,
 	OrthographicCamera,
 } from '@react-three/drei';
-import Background from './components/Background';
+import Experience from './components/Experience';
 import { Perf } from 'r3f-perf';
 
 const App = () => {
@@ -19,7 +19,7 @@ const App = () => {
 				<Perf />
 
 				{/* Background */}
-				<Background />
+				<Experience />
 			</Canvas>
 		</>
 	);
