@@ -36,12 +36,9 @@ const Room = () => {
 			/>
 			<mesh
 				geometry={nodes.lampBulb.geometry}
-				position={[
-					nodes.lampBulb.position.x,
-					nodes.lampBulb.position.y,
-					nodes.lampBulb.position.z,
-				]}
+				position={nodes.lampBulb.position}
 				scale={nodes.lampBulb.scale}
+				rotation={nodes.lampBulb.rotation}
 			/>
 			<mesh
 				geometry={nodes.frameLight.geometry}
@@ -61,6 +58,7 @@ const Room = () => {
 					nodes.shelfLight.position.z,
 				]}
 				scale={nodes.shelfLight.scale}
+				rotation={nodes.shelfLight.rotation}
 			/>
 		</>
 	);
