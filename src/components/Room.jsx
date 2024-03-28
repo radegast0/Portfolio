@@ -7,9 +7,12 @@ const Room = () => {
 
 	return (
 		<>
-			<mesh position={nodes.baked.position} geometry={nodes.baked.geometry}>
+			<mesh
+				position={nodes.baked.position}
+				geometry={nodes.baked.geometry}
+				castShadow
+			>
 				<meshBasicMaterial
-					
 					map={bakedTexture}
 					map-flipY={false}
 				/>
@@ -23,6 +26,7 @@ const Room = () => {
 				]}
 				rotation={nodes.tvScreen.rotation}
 				scale={nodes.tvScreen.scale}
+				castShadow
 			/>
 			<mesh
 				geometry={nodes.pcScreen.geometry}
@@ -33,12 +37,14 @@ const Room = () => {
 				]}
 				rotation={nodes.pcScreen.rotation}
 				scale={nodes.pcScreen.scale}
+				castShadow
 			/>
 			<mesh
 				geometry={nodes.lampBulb.geometry}
 				position={nodes.lampBulb.position}
 				scale={nodes.lampBulb.scale}
 				rotation={nodes.lampBulb.rotation}
+				castShadow
 			/>
 			<mesh
 				geometry={nodes.frameLight.geometry}
@@ -49,6 +55,7 @@ const Room = () => {
 				]}
 				scale={nodes.frameLight.scale}
 				rotation={nodes.frameLight.rotation}
+				castShadow
 			/>
 			<mesh
 				geometry={nodes.shelfLight.geometry}
@@ -59,6 +66,7 @@ const Room = () => {
 				]}
 				scale={nodes.shelfLight.scale}
 				rotation={nodes.shelfLight.rotation}
+				castShadow
 			/>
 		</>
 	);

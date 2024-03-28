@@ -1,0 +1,22 @@
+@font-face {
+	font-family: 'kode';
+	src: url('../fonts/Kode_Mono/KodeMono-VariableFont_wght.ttf');
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	background-color: #030712;
+}
+
+body {
+	@apply w-dvw overflow-x-hidden h-full select-none font-kodemono touch-none cursor-grab active:cursor-grabbing text-[#bdbdbd];
+}

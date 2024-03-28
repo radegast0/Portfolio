@@ -1,10 +1,4 @@
-import {
-	useGLTF,
-	useTexture,
-	PerspectiveCamera,
-	OrbitControls,
-	Stage,
-} from '@react-three/drei';
+import { PerspectiveCamera, OrbitControls, Html } from '@react-three/drei';
 import Room from './Room';
 import Carpet from './Carpet';
 import { Guitar } from './Guitar';
@@ -12,9 +6,18 @@ import Logos from './Logos';
 import { Book } from './Book';
 import Laptop from './Laptop';
 import { useEffect, useRef, useState } from 'react';
-import * as THREE from 'three';
+import Main from '../html/Main';
+import Annotation from './Annotation';
 
 const Experience = () => {
+	const room = useRef();
+	const carpet = useRef();
+	const guitar = useRef();
+	const logos = useRef();
+	const book = useRef();
+	const laptop = useRef();
+
+
 	const [distance, setDistance] = useState();
 	const perspectiveCameraRef = useRef();
 	const orbitControlsRef = useRef();
@@ -31,11 +34,12 @@ const Experience = () => {
 			window.removeEventListener('resize', updateMaxDistance);
 		};
 	}, []);
-	
-
 
 	return (
 		<>
+			<Html fullscreen>
+				<Main />
+			</Html>
 			<color
 				args={['#030202']}
 				attach="background"
@@ -48,7 +52,7 @@ const Experience = () => {
 			<ambientLight intensity={1} />
 			<directionalLight
 				position={[0, 10, 0]}
-				intensity={3}
+				intensity={1}
 			/>
 
 			<OrbitControls
@@ -58,17 +62,24 @@ const Experience = () => {
 				minDistance={7}
 				maxPolarAngle={Math.PI / 2.4}
 				minPolarAngle={Math.PI / 8}
-				minAzimuthAngle={-Math.PI / 1.5}
-				maxAzimuthAngle={Math.PI / 1}
+				// minAzimuthAngle={-Math.PI / 1.5}
+				// maxAzimuthAngle={Math.PI / 1}
 				enablePan={false}
 			/>
+			<mesh position={[5,5,5]}  >
+				<boxGeometry args={[2, 2, 2]} />
+				<meshBasicMaterial color='hotpink' />
+				<Html position={[1.5,0,1.5]} distanceFactor={8} occlude wrapperClass='annotation'> annotation </Html>
+			</mesh>
 
-			<Room />
-			<Carpet />
-			<Guitar />
-			<Logos />
-			<Book />
-			<Laptop />
+			<group>
+				<Room ref={room} />
+				<Carpet ref={carpet} />
+				<Guitar ref={guitar} />
+				<Logos ref={logos} />
+				<Book ref={book} />
+				<Laptop ref={laptop} />
+			</group>
 		</>
 	);
 };

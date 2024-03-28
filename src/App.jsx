@@ -1,12 +1,5 @@
 import { Canvas } from '@react-three/fiber';
-import {
-	OrbitControls,
-	Environment,
-	PerspectiveCamera,
-	OrthographicCamera,
-} from '@react-three/drei';
 import Experience from './components/Experience';
-import { Perf } from 'r3f-perf';
 
 const App = () => {
 	return (
@@ -14,11 +7,9 @@ const App = () => {
 			<Canvas
 				style={{ height: '100vh', width: '100wh' }}
 				camera={{ fov: 35 }}
-				flat
+				flat={true}	
+				shadows			
 			>
-				{/* <Perf /> */}
-
-				{/* Background */}
 				<Experience />
 			</Canvas>
 		</>
