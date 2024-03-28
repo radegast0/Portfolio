@@ -1,7 +1,12 @@
 import { useGLTF } from '@react-three/drei'
+import { useFrame } from '@react-three/fiber'
+import { useRef, useState } from 'react'
 
 export default function Logos(props) {
   const { nodes, materials } = useGLTF('./models/logos.glb')
+  const threejs = useRef()
+  const nodejs = useRef()
+
   return (
     <group {...props} dispose={null}>
       <group position={[-5.573, 2.63, -7.695]} rotation={[1.274, 0, 0]}>
@@ -17,6 +22,7 @@ export default function Logos(props) {
         <mesh geometry={nodes.Curve014_1.geometry} material={materials['Material.007']} />
       </group>
       <mesh
+        ref={nodejs}
         geometry={nodes.nodejs.geometry}
         material={materials.flower}
         position={[-4.409, 2.599, -7.042]}
@@ -29,11 +35,12 @@ export default function Logos(props) {
         rotation={[0, -1.105, 0]}
       />
       <mesh
+        ref={threejs}
         geometry={nodes.threejs.geometry}
         material={materials['material_0.001']}
-        position={[-7.056, 2.298, -5.727]}
-        rotation={[0, 1.082, 0]}
-        scale={[0.569, 0.569, 0.43]}
+        position={nodes.threejs.position}
+        rotation={nodes.threejs.rotation}
+        scale={nodes.threejs.scale}
       />
       <group
         position={[-7.186, 2.345, -4.44]}

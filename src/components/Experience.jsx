@@ -1,20 +1,21 @@
-import { PerspectiveCamera, OrbitControls, Html, OrthographicCamera } from '@react-three/drei';
+import {
+	PerspectiveCamera,
+	OrbitControls,
+	Html,
+} from '@react-three/drei';
 import Room from './Room';
 import Carpet from './Carpet';
 import { Guitar } from './Guitar';
 import Logos from './Logos';
 import { Book } from './Book';
 import { useEffect, useRef, useState } from 'react';
-import Main from '../html/Main';
 import Annotation from './Annotation';
 import Laptop from './Laptop';
 import Amp from './Amp';
+import WallLight from './WallLight';
 
 const Experience = () => {
-
 	const [distance, setDistance] = useState();
-	const perspectiveCameraRef = useRef();
-	const orbitControlsRef = useRef();
 
 	useEffect(() => {
 		const updateMaxDistance = () => {
@@ -31,35 +32,31 @@ const Experience = () => {
 
 	return (
 		<>
-			<Html fullscreen>
-				<Main />
-			</Html>
 			<color
 				args={['#030202']}
 				attach="background"
 			/>
 			<PerspectiveCamera
-				ref={perspectiveCameraRef}
 				makeDefault
 				position={[8, 12, 15]}
 			/>
+
+
 			<ambientLight intensity={3} />
 			<directionalLight
 				position={[0, 10, 0]}
 				intensity={1}
 			/>
 
-			<OrbitControls
-				ref={orbitControlsRef}
-				camera={perspectiveCameraRef.current}
+			 <OrbitControls
 				maxDistance={distance}
 				minDistance={7}
 				maxPolarAngle={Math.PI / 2.4}
 				minPolarAngle={Math.PI / 8}
 				// minAzimuthAngle={-Math.PI / 1.5}
 				// maxAzimuthAngle={Math.PI / 1}
-				enablePan={false}
-			/>
+				enablePan={true}
+			/> 
 			<mesh position={[5, 5, 5]}>
 				<boxGeometry args={[2, 2, 2]} />
 				<meshBasicMaterial color="hotpink" />
@@ -69,8 +66,7 @@ const Experience = () => {
 					occlude
 					wrapperClass="annotation"
 				>
-					{' '}
-					<Annotation />{' '}
+					<Annotation text={'❤️'} />
 				</Html>
 			</mesh>
 
@@ -82,6 +78,7 @@ const Experience = () => {
 				<Book />
 				<Laptop />
 				<Amp />
+				<WallLight />
 			</group>
 		</>
 	);

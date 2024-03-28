@@ -1,7 +1,7 @@
 import { useGLTF, useTexture } from '@react-three/drei';
 
 const Room = () => {
-	const { nodes } = useGLTF('/models/room-merged-v4.glb');
+	const { nodes } = useGLTF('/models/room-backup-v2.glb');
 	const bakedTexture = useTexture('/assets/room-baked-v3.jpg');
 
 	return (

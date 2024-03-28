@@ -17,6 +17,11 @@ html {
 	background-color: #030712;
 }
 
+
+
 body {
-	@apply w-dvw overflow-x-hidden h-full select-none font-kodemono touch-none cursor-grab active:cursor-grabbing text-[#bdbdbd];
+	@apply block w-dvw overflow-x-hidden h-full select-none font-kodemono touch-none  text-[#bdbdbd];
+}
+canvas {
+	@apply cursor-grab active:cursor-grabbing;
 }
