@@ -1,22 +1,16 @@
-import { PerspectiveCamera, OrbitControls, Html } from '@react-three/drei';
+import { PerspectiveCamera, OrbitControls, Html, OrthographicCamera } from '@react-three/drei';
 import Room from './Room';
 import Carpet from './Carpet';
 import { Guitar } from './Guitar';
 import Logos from './Logos';
 import { Book } from './Book';
-import Laptop from './Laptop';
 import { useEffect, useRef, useState } from 'react';
 import Main from '../html/Main';
 import Annotation from './Annotation';
+import Laptop from './Laptop';
+import Amp from './Amp';
 
 const Experience = () => {
-	const room = useRef();
-	const carpet = useRef();
-	const guitar = useRef();
-	const logos = useRef();
-	const book = useRef();
-	const laptop = useRef();
-
 
 	const [distance, setDistance] = useState();
 	const perspectiveCameraRef = useRef();
@@ -47,9 +41,9 @@ const Experience = () => {
 			<PerspectiveCamera
 				ref={perspectiveCameraRef}
 				makeDefault
-				position={[8, 12, 20]}
+				position={[8, 12, 15]}
 			/>
-			<ambientLight intensity={1} />
+			<ambientLight intensity={3} />
 			<directionalLight
 				position={[0, 10, 0]}
 				intensity={1}
@@ -66,19 +60,28 @@ const Experience = () => {
 				// maxAzimuthAngle={Math.PI / 1}
 				enablePan={false}
 			/>
-			<mesh position={[5,5,5]}  >
+			<mesh position={[5, 5, 5]}>
 				<boxGeometry args={[2, 2, 2]} />
-				<meshBasicMaterial color='hotpink' />
-				<Html position={[1.5,0,1.5]} distanceFactor={8} occlude wrapperClass='annotation'> annotation </Html>
+				<meshBasicMaterial color="hotpink" />
+				<Html
+					position={[1.5, 0, 1.5]}
+					distanceFactor={8}
+					occlude
+					wrapperClass="annotation"
+				>
+					{' '}
+					<Annotation />{' '}
+				</Html>
 			</mesh>
 
 			<group>
-				<Room ref={room} />
-				<Carpet ref={carpet} />
-				<Guitar ref={guitar} />
-				<Logos ref={logos} />
-				<Book ref={book} />
-				<Laptop ref={laptop} />
+				<Room />
+				<Carpet />
+				<Guitar />
+				<Logos />
+				<Book />
+				<Laptop />
+				<Amp />
 			</group>
 		</>
 	);

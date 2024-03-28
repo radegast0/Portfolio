@@ -3,7 +3,9 @@ import '../styles/annotation.css';
 
 const Annotation = () => {
   return (
-    <Html wrapperClass="annotation">Test</Html>
+    <>
+      Annotation
+    </>
   );
 };
 
