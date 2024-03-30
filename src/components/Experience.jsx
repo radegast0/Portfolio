@@ -13,6 +13,7 @@ import Annotation from './Annotation';
 import Laptop from './Laptop';
 import Amp from './Amp';
 import WallLight from './WallLight';
+import CameraPositionLogger from '../helpers/CameraPositionLogger';
 
 const Experience = () => {
 	const [distance, setDistance] = useState();
@@ -36,11 +37,6 @@ const Experience = () => {
 				args={['#030202']}
 				attach="background"
 			/>
-			<PerspectiveCamera
-				makeDefault
-				position={[8, 12, 15]}
-			/>
-
 
 			<ambientLight intensity={3} />
 			<directionalLight
@@ -48,6 +44,7 @@ const Experience = () => {
 				intensity={1}
 			/>
 
+			 {/* <CameraPositionLogger event='mousedown' /> */}
 			 <OrbitControls
 				maxDistance={distance}
 				minDistance={7}

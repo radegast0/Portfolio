@@ -2,7 +2,6 @@ import { useGLTF } from '@react-three/drei'
 
 export default function Carpet(props) {
   const model = useGLTF('./models/carpet.glb')
-  console.log(model);
   return (
     <group {...props} dispose={null}>
       <mesh
