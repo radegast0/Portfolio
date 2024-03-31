@@ -1,6 +1,6 @@
 import { useGLTF } from '@react-three/drei'
 
-export function Guitar(props) {
+export default function Guitar(props) {
   const { nodes, materials } = useGLTF('./models/guitar.glb')
   return (
     <group position={[-0.1,0,0]} {...props} dispose={null}>
