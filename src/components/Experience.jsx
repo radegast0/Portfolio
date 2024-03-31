@@ -43,7 +43,6 @@ const Experience = () => {
 
 			<ambientLight intensity={0.5} />
 			<directionalLight intensity={5} position={[0, 10, 0]} />
-			<PerspectiveCamera  />
 
 			 {/* <CameraPositionLogger event='mousedown' /> */}
 			 <OrbitControls

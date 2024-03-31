@@ -10,8 +10,8 @@ export default function Guitar(props) {
             <mesh
               geometry={nodes.Guitar_Stand_Guitar_Stand_0.geometry}
               material={materials.Guitar_Stand}
-              position={[-12.639, -10.041, 0.007]}
-              rotation={[0, 0, 0.935]}
+              position={nodes.Guitar_Stand_Guitar_Stand_0.position}
+              rotation={nodes.Guitar_Stand_Guitar_Stand_0.rotation}
             />
           </group>
         </group>
@@ -21,8 +21,8 @@ export default function Guitar(props) {
           <mesh
             geometry={nodes.Object_3001.geometry}
             material={materials['Gibson_A1_LOD001_Mat.001']}
-            position={[7.693, 2.204, 39.918]}
-            rotation={[-0.06, -0.39, 1.413]}
+            position={nodes.Object_3001.position}
+            rotation={nodes.Object_3001.rotation}
           />
         </group>
       </group>
