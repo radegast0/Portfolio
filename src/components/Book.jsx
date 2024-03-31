@@ -8,12 +8,12 @@ export default function Book(props) {
       <mesh
         geometry={nodes.polySurface941_guitar_0.geometry}
         material={materials.guitar}
-        position={[-5.64962339, 0.36557257, 0.43780971]}
+        position={nodes.polySurface941_guitar_0.position}
       />
       <mesh
         geometry={nodes.polySurface941_white_0.geometry}
         material={materials.white}
-        position={[-5.65105963, 0.36557257, 0.43780971]}
+        position={nodes.polySurface941_white_0.position}
       />
     </group>
   )

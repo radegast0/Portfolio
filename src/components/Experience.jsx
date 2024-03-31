@@ -42,8 +42,9 @@ const Experience = () => {
 				attach="background"
 			/>
 
-			<ambientLight intensity={0.5} />
-			<directionalLight intensity={5} position={[0, 10, 0]} />
+			<ambientLight intensity={1.5} />
+			<directionalLight intensity={3} position={[0, 10, 0]} />
+			
 
 			 {/* <CameraPositionLogger event='mousedown' /> */}
 			 <OrbitControls

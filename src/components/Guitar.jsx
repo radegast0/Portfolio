@@ -3,7 +3,7 @@ import { useGLTF } from '@react-three/drei'
 export default function Guitar(props) {
   const { nodes, materials } = useGLTF('./models/guitar.glb')
   return (
-    <group position={[-0.1,0,0]} {...props} dispose={null}>
+    <group position={[-0,0,0]} {...props} dispose={null}>
       <group position={[0, 0.264, -12.841]} rotation={[-Math.PI / 2, 0, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]}>
           <group position={[-0.028, -0.003, 0.256]} rotation={[-Math.PI / 2, 0, 0.495]}>

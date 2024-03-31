@@ -14,8 +14,8 @@ export default function wallLight(props) {
         receiveShadow
         geometry={nodes.gold_lambert3_0.geometry}
         material={materials.lambert3}
-        position={[-7.051, 4.504, -0.985]}
-        rotation={[0, 1.571, 0]}
+        position={nodes.gold_lambert3_0.position}
+        rotation={nodes.gold_lambert3_0.rotation}
       />
     </group>
   )
