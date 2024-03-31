@@ -17,6 +17,7 @@ import Outer from './Outer';
 import Guitar from './Guitar';
 import Curtain from './Curtain';
 import { Mug } from './Mug';
+import Chair from './Chair';
 
 const Experience = () => {
 	const [distance, setDistance] = useState();
@@ -75,6 +76,7 @@ const Experience = () => {
 				<Laptop />
 				<Amp />
 				<WallLight /> */}
+				<Chair />
 				<Mug />
 				<Book />
 				<Curtain />
