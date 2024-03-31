@@ -4,6 +4,7 @@ const Room = () => {
 	const { nodes } = useGLTF('./models/room.glb');
 	const bakedTexture = useTexture('/assets/room-baked-v4.jpg');
 
+
 	return (
 		<>	
 			<mesh position={nodes.mergedV5.position}

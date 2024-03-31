@@ -3,9 +3,8 @@ import { useGLTF, useTexture } from "@react-three/drei"
 export default function Outer () {
 
     const { nodes } = useGLTF('./models/outer.glb')
-    const root = './assets/outer-baked-v4.jpg'
-    const bakedTexture = useTexture(root)
-
+    const bakedTexture = useTexture('./assets/outer-baked-v4.jpg')
+    useTexture.preload(bakedTexture)
 
 
   return (

@@ -9,7 +9,7 @@ export default function Carpet(props) {
       <mesh
         geometry={nodes.Object_16.geometry}
         material={nodes.Object_16.material}
-        position={nodes.Object_16.position}
+        position={[nodes.Object_16.position.x, nodes.Object_16.position.y - 0.02, nodes.Object_16.position.z]}
         rotation={nodes.Object_16.rotation}
       />
     </group>

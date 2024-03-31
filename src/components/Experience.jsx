@@ -24,7 +24,7 @@ const Experience = () => {
 
 	useEffect(() => {
 		const updateMaxDistance = () => {
-			const maxDistance = window.innerWidth > 1280 ? 35 : 45;
+			const maxDistance = window.innerWidth > 1280 ? 30 : 35;
 			setDistance(maxDistance); // Update the distance state
 		};
 		updateMaxDistance();
