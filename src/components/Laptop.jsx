@@ -13,7 +13,7 @@ export default function Laptop(props) {
         position={[-1.34186137, 2.31492853, -5.63775015]}
         rotation={[-Math.PI, 1.31913011, -Math.PI]}
         scale={[0.34308976, 0.3430897, 0.34308976]}>
-        <mesh geometry={nodes.Object_0006.geometry} material={materials['case']} />
+        <mesh twoSided={false} geometry={nodes.Object_0006.geometry} material={materials['case']} />
         <mesh geometry={nodes.Object_0006_1.geometry} material={materials.slots_1} />
         <mesh geometry={nodes.Object_0006_2.geometry} material={materials.speaker} />
         <mesh geometry={nodes.Object_0006_3.geometry} material={materials.bezel} />

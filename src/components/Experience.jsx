@@ -2,11 +2,14 @@ import {
 	PerspectiveCamera,
 	OrbitControls,
 	Html,
+	CameraControls,
+	Box,
+	Bounds,
 } from '@react-three/drei';
 import Room from './Room';
 import Carpet from './Carpet';
 import Logos from './Logos';
-import  Book  from './Book';
+import Book from './Book';
 import { useEffect, useRef, useState } from 'react';
 import Annotation from './Annotation';
 import Laptop from './Laptop';
@@ -18,13 +21,21 @@ import Guitar from './Guitar';
 import Curtain from './Curtain';
 import { Mug } from './Mug';
 import Chair from './Chair';
+import { useThree } from '@react-three/fiber';
+import { Box3 } from 'three';
+import * as THREE from 'three';
 
 const Experience = () => {
 	const [distance, setDistance] = useState();
+	const [panningSpeed, setPanningSpeed] = useState(0.4);
+	const [bool, setBool] = useState(false);
+
+	const { camera } = useThree();
+	const cameraControlRef = useRef();
 
 	useEffect(() => {
 		const updateMaxDistance = () => {
-			const maxDistance = window.innerWidth > 1280 ? 30 : 35;
+			const maxDistance = window.innerWidth > 1280 ? 30 : 40;
 			setDistance(maxDistance); // Update the distance state
 		};
 		updateMaxDistance();
@@ -35,6 +46,16 @@ const Experience = () => {
 		};
 	}, []);
 
+	const boundingBox = new Box3(
+		new THREE.Vector3(-8, 0, -8),
+		new THREE.Vector3(8, 10, 8)
+	);
+
+	const boundingBoxHelper = new Bounds(boundingBox);
+
+	cameraControlRef.current?.setBoundary(boundingBox);
+
+	
 	return (
 		<>
 			<color
@@ -43,31 +64,31 @@ const Experience = () => {
 			/>
 
 			<ambientLight intensity={1.5} />
-			<directionalLight intensity={3} position={[0, 10, 0]} />
-			
-
-			 {/* <CameraPositionLogger event='mousedown' /> */}
-			 <OrbitControls
+			<directionalLight
+				intensity={3}
+				position={[0, 10, 0]}
+			/>
+			<CameraControls
+				boundary={boundingBox}
+				ref={cameraControlRef}
+				dollySpeed={0.4}
 				maxDistance={distance}
-				minDistance={7}
+				minDistance={4}
 				maxPolarAngle={Math.PI / 2.4}
 				minPolarAngle={Math.PI / 8}
-				minAzimuthAngle={-Math.PI / 1.5}
+				minAzimuthAngle={-Math.PI / 1}
 				maxAzimuthAngle={Math.PI / 1}
-				enablePan={true}
-			/> 
-			<mesh position={[5, 5, 5]}>
-				<boxGeometry args={[2, 2, 2]} />
-				<meshBasicMaterial color="hotpink" />
-				<Html
-					position={[1.5, 0, 1.5]}
-					distanceFactor={8}
-					occlude
-					wrapperClass="annotation"
-				>
-					<Annotation text={'❤️'} />
-				</Html>
-			</mesh>
+				truckSpeed={1}
+			/>
+			<PerspectiveCamera
+				makeDefault
+				position={[8, 12, 15]}
+				fov={60}
+				near={0.01}
+				far={100}
+			/>
+
+			{/* <CameraPositionLogger event='mousedown' /> */}
 			<group>
 				{/* <Room />
 				<Carpet />
@@ -88,8 +109,8 @@ const Experience = () => {
 				<Amp />
 				<Laptop />
 				<Room />
-				<Outer />
 			</group>
+			<Outer />
 		</>
 	);
 };
