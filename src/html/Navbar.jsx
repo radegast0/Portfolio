@@ -2,7 +2,7 @@ const Navbar = () => {
 	const navLists = ['Home', 'About', 'Skills', 'Contact'];
 
 	return (
-		<header className="w-full py-5 sm:px-10 px-5 flex justify-between items-center">
+		<header className="w-full py-5 sm:px-10 px-5 flex justify-between items-center tracking-tight uppercase">
 			<nav className="flex w-full screen-max-width ">
 				<div className="flex flex-1 justify-center gap-0 lg:gap-12 text-sm lg:text-base ">
 					{navLists.map((nav) => (

@@ -5,7 +5,7 @@ export default function Guitar(props) {
 	const { nodes, materials } = useGLTF('./models/guitar.glb');
 	return (
 		<>
-			<Annotation i={0} position={[-6, 2.4, 1]} />
+			<Annotation position={[-6, 2.4, 1.2]} selected={0} />
 
 			<group
 				position={[-0, 0, 0]}

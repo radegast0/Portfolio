@@ -51,7 +51,7 @@ const Experience = () => {
 		new THREE.Vector3(8, 10, 8)
 	);
 
-	const boundingBoxHelper = new Bounds(boundingBox);
+	
 
 	cameraControlRef.current?.setBoundary(boundingBox);
 
@@ -111,6 +111,7 @@ const Experience = () => {
 				<Room />
 			</group>
 			<Outer />
+			<Annotation position={[5,5,5]} selected={[1]} title={'test'}/>
 		</>
 	);
 };

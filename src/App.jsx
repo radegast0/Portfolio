@@ -1,7 +1,6 @@
 import { Canvas } from '@react-three/fiber';
 import Experience from './components/Experience';
 import Main from './html/Main';
-import Script from './api/Script';
 import { Perf } from 'r3f-perf';
 
 const App = () => {
