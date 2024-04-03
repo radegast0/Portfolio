@@ -1,11 +1,18 @@
-.annotation > div
-{
-    position: absolute;
-    background: #00000088;
-    color: white;
-    padding: 15px;
-    white-space: nowrap;
-    overflow: hidden;
-    border-radius: 30px;
-    user-select: none;
+.annotation > div {
+	@apply 
+    bg-[#00000088] 
+    text-gray-300 
+    whitespace-nowrap 
+    overflow-hidden 
+    rounded-[30px]
+    select-none border 
+    border-gray-300 
+    hover:bg-[#000000CC] 
+    hover:text-white 
+    hover:border-white
+    transition-all
+    duration-100
+    cursor-pointer
+    ;
 }
+
