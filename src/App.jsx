@@ -7,16 +7,7 @@ import { Perf } from 'r3f-perf';
 const App = () => {
 	return (
 		<>
-			
-			<Script />
-		</>
-	);
-};
-
-export default App;
-
-
-{/* <div className="fixed top-0 left-0 right-0 z-10">
+			<div className="fixed top-0 left-0 right-0 z-10">
 				<Main />
 			</div>
 			<div className="fixed top-0 left-0 w-screen h-screen z-0">
@@ -25,6 +16,11 @@ export default App;
 					shadows
 				>
 					<Experience />
-				{/* <Perf /> */}
-		//		</Canvas>
-		//	</div> */}
+					{/* <Perf /> */}
+				</Canvas>
+			</div>
+		</>
+	);
+};
+
+export default App;
