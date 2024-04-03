@@ -8,16 +8,17 @@ export default function Guitar(props) {
 			<Annotation
 				position={[-6, 2.4, 1.2]}
 				selected={0}
-				title={
-					<a
-						className=" border-b-[2px] rounded-sm mr-4 border-transparent hover:border-[#00da5b93] text-[#00da5b] transition-all "
-						target="_blank"
-						href="https://open.spotify.com/user/mot%C3%B6rkafa?si=ueGATfW7SXuE12f1i54p9w"
-					>
-						visit
-					</a>
-				}
-			/>
+				title={<p className="">Spotify</p>}
+				childSelected={1}
+				distanceFactor={10}
+			>
+				<a
+					target="_blank"
+					href="https://open.spotify.com/user/mot%C3%B6rkafa?si=ueGATfW7SXuE12f1i54p9w"
+				>
+					visit
+				</a>
+			</Annotation>
 
 			<group
 				position={[-0, 0, 0]}

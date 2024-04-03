@@ -7,7 +7,7 @@ const Navbar = () => {
 				<div className="flex flex-1 justify-center gap-0 lg:gap-12 text-sm lg:text-base ">
 					{navLists.map((nav) => (
 						<div
-							className=" px-4 p-1 cursor-pointer hover:text-white transition-all"
+							className=" px-4 p-1 cursor-pointer hover:text-zinc-300 transition-all"
 							key={nav}
 						>
 							{nav}

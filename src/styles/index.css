@@ -20,7 +20,7 @@ html {
 
 
 body {
-	@apply block w-dvw overflow-x-hidden h-full select-none font-kodemono touch-none  text-[#bdbdbd];
+	@apply block w-dvw overflow-x-hidden h-full select-none font-kodemono touch-none text-white
 }
 canvas {
 	@apply cursor-grab active:cursor-grabbing;

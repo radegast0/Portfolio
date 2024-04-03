@@ -66,7 +66,7 @@ const Experience = () => {
 			<ambientLight intensity={1.5} />
 			<directionalLight
 				intensity={3}
-				position={[0, 10, 0]}
+				position={[0, 5, 1]}
 			/>
 			<CameraControls
 				boundary={boundingBox}
@@ -80,6 +80,7 @@ const Experience = () => {
 				maxAzimuthAngle={Math.PI / 1}
 				truckSpeed={1}
 			/>
+			<OrbitControls enabled={false} />
 			<PerspectiveCamera
 				makeDefault
 				position={[8, 12, 15]}
@@ -111,7 +112,6 @@ const Experience = () => {
 				<Room />
 			</group>
 			<Outer />
-			<Annotation position={[5,5,5]} selected={[1]} title={'test'}/>
 		</>
 	);
 };
