@@ -1,14 +1,10 @@
-import React, { useRef } from 'react';
 import { useGLTF } from '@react-three/drei';
-import Annotation from './Annotation';
 
 export default function Logos(props) {
 	const { nodes, materials } = useGLTF('./models/logos.glb');
 	return (
 		<>
-      <Annotation position={[-6, 3.3, -6]} selected={3} title='Skills' childSelected={2} >
-		<a target='_blank' href="https://github.com/radegast0">GitHub</a>
-	  </Annotation>
+      
 			<group
 				{...props}
 				dispose={null}

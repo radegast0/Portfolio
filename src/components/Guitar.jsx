@@ -1,25 +1,10 @@
 import { useGLTF } from '@react-three/drei';
-import Annotation from './Annotation';
+
 
 export default function Guitar(props) {
 	const { nodes, materials } = useGLTF('./models/guitar.glb');
 	return (
 		<>
-			<Annotation
-				position={[-6, 2.4, 1.2]}
-				selected={0}
-				title={<p className="">Spotify</p>}
-				childSelected={1}
-				distanceFactor={10}
-			>
-				<a
-					target="_blank"
-					href="https://open.spotify.com/user/mot%C3%B6rkafa?si=ueGATfW7SXuE12f1i54p9w"
-				>
-					visit
-				</a>
-			</Annotation>
-
 			<group
 				position={[-0, 0, 0]}
 				{...props}

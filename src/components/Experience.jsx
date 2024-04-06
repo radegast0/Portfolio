@@ -1,36 +1,30 @@
 import {
 	PerspectiveCamera,
-	OrbitControls,
-	Html,
 	CameraControls,
-	Box,
 	Bounds,
+	Html,
 } from '@react-three/drei';
 import Room from './Room';
 import Carpet from './Carpet';
 import Logos from './Logos';
 import Book from './Book';
 import { useEffect, useRef, useState } from 'react';
-import Annotation from './Annotation';
 import Laptop from './Laptop';
 import Amp from './Amp';
 import WallLight from './WallLight';
-import CameraPositionLogger from '../helpers/CameraPositionLogger';
 import Outer from './Outer';
 import Guitar from './Guitar';
 import Curtain from './Curtain';
 import { Mug } from './Mug';
 import Chair from './Chair';
-import { useThree } from '@react-three/fiber';
 import { Box3 } from 'three';
 import * as THREE from 'three';
+import Annotations from './Annotations';
+import SelectToZoom from './SelectToZoom';
 
 const Experience = () => {
 	const [distance, setDistance] = useState();
-	const [panningSpeed, setPanningSpeed] = useState(0.4);
-	const [bool, setBool] = useState(false);
 
-	const { camera } = useThree();
 	const cameraControlRef = useRef();
 
 	useEffect(() => {
@@ -51,11 +45,8 @@ const Experience = () => {
 		new THREE.Vector3(8, 10, 8)
 	);
 
-	
-
 	cameraControlRef.current?.setBoundary(boundingBox);
 
-	
 	return (
 		<>
 			<color
@@ -69,6 +60,7 @@ const Experience = () => {
 				position={[0, 5, 1]}
 			/>
 			<CameraControls
+				makeDefault
 				boundary={boundingBox}
 				ref={cameraControlRef}
 				dollySpeed={0.4}
@@ -80,7 +72,7 @@ const Experience = () => {
 				maxAzimuthAngle={Math.PI / 1}
 				truckSpeed={1}
 			/>
-			<OrbitControls enabled={false} />
+			{/* <OrbitControls enabled={false} /> */}
 			<PerspectiveCamera
 				makeDefault
 				position={[8, 12, 15]}
@@ -91,14 +83,6 @@ const Experience = () => {
 
 			{/* <CameraPositionLogger event='mousedown' /> */}
 			<group>
-				{/* <Room />
-				<Carpet />
-				<Guitar />
-				<Logos />
-				<Book />
-				<Laptop />
-				<Amp />
-				<WallLight /> */}
 				<Chair />
 				<Mug />
 				<Book />
@@ -110,7 +94,23 @@ const Experience = () => {
 				<Amp />
 				<Laptop />
 				<Room />
+				<Bounds>
+					<SelectToZoom>
+						<group>
+							<mesh position={[2, 2, 2]}>
+								<boxGeometry args={[1, 1, 1]} />
+								<meshBasicMaterial color="red" />
+							</mesh>
+							<mesh position={[1, 1, 1]}>
+								<boxGeometry args={[1, 1, 1]} />
+								<meshBasicMaterial color="green" />
+							</mesh>
+						</group>
+					</SelectToZoom>
+				</Bounds>
 			</group>
+
+			<Annotations />
 			<Outer />
 		</>
 	);
