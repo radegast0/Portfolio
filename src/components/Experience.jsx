@@ -3,6 +3,7 @@ import {
 	CameraControls,
 	Bounds,
 	Html,
+	OrbitControls,
 } from '@react-three/drei';
 import Room from './Room';
 import Carpet from './Carpet';
@@ -24,12 +25,13 @@ import SelectToZoom from './SelectToZoom';
 
 const Experience = () => {
 	const [distance, setDistance] = useState();
+	const camera = useRef();
 
 	const cameraControlRef = useRef();
 
 	useEffect(() => {
 		const updateMaxDistance = () => {
-			const maxDistance = window.innerWidth > 1280 ? 30 : 40;
+			const maxDistance = window.innerWidth > 1280 ? 10 : 20;
 			setDistance(maxDistance); // Update the distance state
 		};
 		updateMaxDistance();
@@ -49,20 +51,7 @@ const Experience = () => {
 
 	return (
 		<>
-			<color
-				args={['#030202']}
-				attach="background"
-			/>
-
-			<ambientLight intensity={1.5} />
-			<directionalLight
-				intensity={3}
-				position={[0, 5, 1]}
-			/>
-			<CameraControls
-				makeDefault
-				boundary={boundingBox}
-				ref={cameraControlRef}
+			{/* <CameraControls
 				dollySpeed={0.4}
 				maxDistance={distance}
 				minDistance={4}
@@ -71,45 +60,44 @@ const Experience = () => {
 				minAzimuthAngle={-Math.PI / 1}
 				maxAzimuthAngle={Math.PI / 1}
 				truckSpeed={1}
-			/>
-			{/* <OrbitControls enabled={false} /> */}
-			<PerspectiveCamera
-				makeDefault
-				position={[8, 12, 15]}
-				fov={60}
-				near={0.01}
-				far={100}
-			/>
+			/> */}
 
-			{/* <CameraPositionLogger event='mousedown' /> */}
-			<group>
-				<Chair />
-				<Mug />
-				<Book />
-				<Curtain />
-				<Logos />
-				<Guitar />
-				<Carpet />
-				<WallLight />
-				<Amp />
-				<Laptop />
-				<Room />
-				<Bounds>
+			<Bounds
+				fit
+				observe
+				margin={1}
+			>
+				<color
+					args={['#030202']}
+					attach="background"
+				/>
+
+				<ambientLight intensity={1.5} />
+				<directionalLight
+					intensity={3}
+					position={[0, 5, 1]}
+				/>
+				{/*  */}
+				{/* <OrbitControls enabled={false} /> */}
+
+				{/* <CameraPositionLogger event='mousedown' /> */}
+				<group position={[0, 0, 0]}>
 					<SelectToZoom>
-						<group>
-							<mesh position={[2, 2, 2]}>
-								<boxGeometry args={[1, 1, 1]} />
-								<meshBasicMaterial color="red" />
-							</mesh>
-							<mesh position={[1, 1, 1]}>
-								<boxGeometry args={[1, 1, 1]} />
-								<meshBasicMaterial color="green" />
-							</mesh>
-						</group>
+						<Chair />
+						<Mug />
+						<Book />
+						<Curtain />
+						<Logos />
+						<Guitar />
+						<Carpet />
+						<WallLight />
+						<Amp />
+						<Laptop />
 					</SelectToZoom>
-				</Bounds>
-			</group>
 
+					<Room />
+				</group>
+			</Bounds>
 			<Annotations />
 			<Outer />
 		</>
