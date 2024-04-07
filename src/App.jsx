@@ -21,19 +21,9 @@ const App = () => {
 				>
 					<PerspectiveCamera
 						makeDefault
-						position={[0, 1.5, 0]}
+						position={[0, 2, 0]}
 					/>
-					<OrbitControls
-						maxPolarAngle={Math.PI / 2.2}
-						minPolarAngle={Math.PI / 8}
-						minAzimuthAngle={-Math.PI / 1}
-						maxAzimuthAngle={Math.PI / 1}
-						enablePan={false}
-						makeDefault
-						enableZoom={true}
-						maxDistance={40}
-						minDistance={1}
-					/>
+
 
 					<Experience />
 					{/* <Perf /> */}

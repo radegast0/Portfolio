@@ -24,29 +24,15 @@ import Annotations from './Annotations';
 import SelectToZoom from './SelectToZoom';
 
 const Experience = () => {
-	const [distance, setDistance] = useState();
 	const camera = useRef();
 
 	const cameraControlRef = useRef();
-
-	useEffect(() => {
-		const updateMaxDistance = () => {
-			const maxDistance = window.innerWidth > 1280 ? 10 : 20;
-			setDistance(maxDistance); // Update the distance state
-		};
-		updateMaxDistance();
-		window.addEventListener('resize', updateMaxDistance);
-
-		return () => {
-			window.removeEventListener('resize', updateMaxDistance);
-		};
-	}, []);
 
 	const boundingBox = new Box3(
 		new THREE.Vector3(-8, 0, -8),
 		new THREE.Vector3(8, 10, 8)
 	);
-
+	// Update the distance state
 	cameraControlRef.current?.setBoundary(boundingBox);
 
 	return (
@@ -61,22 +47,31 @@ const Experience = () => {
 				maxAzimuthAngle={Math.PI / 1}
 				truckSpeed={1}
 			/> */}
-
+			<OrbitControls
+				maxPolarAngle={Math.PI / 2.2}
+				minPolarAngle={Math.PI / 8}
+				minAzimuthAngle={-Math.PI / 1}
+				maxAzimuthAngle={Math.PI / 1}
+				enablePan={false}
+				makeDefault
+				enableZoom={true}
+				maxDistance={window.innerWidth < 1280 ? 43 : 35}
+				minDistance={1}
+			/>
+			<color
+				args={['#030202']}
+				attach="background"
+			/>
+			<ambientLight intensity={1.5} />
+			<directionalLight
+				intensity={3}
+				position={[0, 5, 1]}
+			/>
 			<Bounds
 				fit
 				observe
 				margin={1}
 			>
-				<color
-					args={['#030202']}
-					attach="background"
-				/>
-
-				<ambientLight intensity={1.5} />
-				<directionalLight
-					intensity={3}
-					position={[0, 5, 1]}
-				/>
 				{/*  */}
 				{/* <OrbitControls enabled={false} /> */}
 
@@ -94,10 +89,9 @@ const Experience = () => {
 						<Amp />
 						<Laptop />
 					</SelectToZoom>
-
-					<Room />
 				</group>
 			</Bounds>
+			<Room />
 			<Annotations />
 			<Outer />
 		</>
