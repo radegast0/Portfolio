@@ -1,11 +1,14 @@
-import Navbar from './Navbar'
+// Main.jsx
+import React, { useRef, forwardRef } from 'react';
+import Navbar from './Navbar';
 
-const Main = () => {
+const Main = forwardRef(({ children }, ref) => {
   return (
-    <div className='max-w-screen-lg mx-auto'>
-        <Navbar />
+    <div>
+      <Navbar ref={ref} />
+      {children}
     </div>
-  )
-}
+  );
+});
 
-export default Main
+export default Main;

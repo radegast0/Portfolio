@@ -9,8 +9,6 @@ export default function wallLight(props) {
 				dispose={null}
 			>
 				<mesh
-					castShadow
-					receiveShadow
 					geometry={nodes.gold_lambert3_0.geometry}
 					material={materials.lambert3}
 					position={nodes.gold_lambert3_0.position}
