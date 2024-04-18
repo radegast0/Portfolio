@@ -21,10 +21,9 @@ export default function Laptop(props) {
           position={[0, 1.29, -1.39]}
           rotation-x={-Math.PI / 18}
           occlude
-          
           > 
           <div className='text-black w-[900px] h-[490px] touch-pan-y '>
-            <iframe src="https://apple-clone-rust.vercel.app/" className="w-full h-full" />
+            <AboutIndex />
           </div>
           </Html>
         <mesh twoSided={false} geometry={nodes.Object_0006.geometry} material={materials['case']} />
@@ -34,6 +33,7 @@ export default function Laptop(props) {
         <mesh geometry={nodes.Object_0006_4.geometry} material={materials.slots_2} />
         <mesh geometry={nodes.Object_0006_5.geometry} material={materials.shiny_parts} />
       </group>
+
     </group>
   )
 }

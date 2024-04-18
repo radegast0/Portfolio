@@ -14,7 +14,6 @@ import Chair from './Chair';
 import Annotations from './Annotations';
 import SelectToZoom from './SelectToZoom';
 import React, { forwardRef } from 'react';
-import AboutIndex from './AboutIndex';
 
 const Experience = forwardRef(({ children }, ref) => {
 	return (
@@ -57,10 +56,13 @@ const Experience = forwardRef(({ children }, ref) => {
 					<Amp />
 				</group>
 			</Bounds>
-			<Annotations ref={ref} />
 			<Laptop />
+			<Annotations ref={ref} />
 			<Room />
 			<Outer />
+			
+			
+
 			{/* <CameraPositionLogger /> */}
 		</>
 	);

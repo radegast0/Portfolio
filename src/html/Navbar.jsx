@@ -12,7 +12,7 @@ const Navbar = React.forwardRef((props, ref) => {
 		{
 			label: 'About',
 			position:
-				screen.width < 1280 ? { x: 2, y: 5.5, z: -7 } : { x: 0.5, y: 3.5, z: -6.2 },
+				screen.width < 1280 ? { x: 1, y: 4, z: -6.5 } : { x: 0, y: 3, z: -6 },
 			target: { x: -1.4, y: 2.7, z: -5.6 },
 		},
 		{
