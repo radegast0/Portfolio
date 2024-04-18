@@ -1,7 +1,4 @@
-import {
-	Bounds,
-	OrbitControls,
-} from '@react-three/drei';
+import { Bounds } from '@react-three/drei';
 import Room from './Room';
 import Carpet from './Carpet';
 import Logos from './Logos';
@@ -46,22 +43,24 @@ const Experience = () => {
 			>
 				<group position={[0, 0, 0]}>
 					<SelectToZoom>
-						<Chair />
-						<Mug />
-						<Book />
-						<Curtain />
-						<Logos />
 						<Guitar />
-						<Carpet />
-						<WallLight />
-						<Amp />
-						<Laptop />
 					</SelectToZoom>
+					<Laptop />
+					<Chair />
+					<Mug />
+					<Book />
+					<Curtain />
+					<Logos />
+					<Carpet />
+					<WallLight />
+					<Amp />
 				</group>
 			</Bounds>
-			<Room />
 			<Annotations />
+
+			<Room />
 			<Outer />
+			{/* <CameraPositionLogger /> */}
 		</>
 	);
 };

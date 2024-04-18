@@ -1,16 +1,9 @@
-import { Canvas, useThree } from '@react-three/fiber';
+import { Canvas } from '@react-three/fiber';
 import Experience from './components/Experience';
 import Main from './html/Main';
-import { Perf } from 'r3f-perf';
-import {
-	CameraControls,
-	OrbitControls,
-	PerspectiveCamera,
-} from '@react-three/drei';
+import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
 import { useRef } from 'react';
-
-
-
+import Annotations from './components/Annotations';
 
 const App = () => {
 	const controls = useRef(null);
@@ -42,6 +35,7 @@ const App = () => {
 					/>
 
 					<Experience />
+
 					{/* <Perf /> */}
 				</Canvas>
 			</div>
