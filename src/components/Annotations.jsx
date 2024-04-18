@@ -27,7 +27,7 @@ const Annotations = React.forwardRef((props, ref) => {
 			link: 'https://github.com/radegast0',
 			text: 'GitHub',
 			cameraPosition:
-				screen.width < 1280 ? { x: 0, y: 8, z: 0 } : { x: -3.3, y: 4.2, z: -3.4 },
+				screen.width < 1280 ? { x: 0, y: 8, z: 0 } : { x: -3.3, y: 4.25, z: -3.4 },
 			targetPosition: { x: -3.4, y: 4.2, z: -3.5 },
 		},
 		{
