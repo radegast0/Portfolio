@@ -2,8 +2,6 @@ import { Canvas } from '@react-three/fiber';
 import Experience from './components/Experience';
 import Main from './html/Main';
 import {
-	CameraControls,
-	MapControls,
 	OrbitControls,
 	PerspectiveCamera,
 } from '@react-three/drei';
@@ -15,7 +13,7 @@ const App = () => {
 		<>
 			<div className="fixed top-0 left-0 w-screen h-screen z-0">
 				<div className="fixed top-0 left-0 right-0 z-10">
-					<Main ref={controls} /> {/* there is a navbar inside */}
+					<Main ref={controls} />
 				</div>
 				<Canvas
 					flat={true}
@@ -25,13 +23,6 @@ const App = () => {
 						makeDefault
 						position={[0, 2, 0]}
 					/>
-					{/* <MapControls
-						enableDamping={true}
-						enableRotate={true}
-						enablePan={false}
-						rotateSpeed={0.1}
-						enableZoom={false}
-					/> */}
 					<OrbitControls
 						ref={controls}
 						maxPolarAngle={Math.PI / 2.2}
@@ -46,8 +37,6 @@ const App = () => {
 					/>
 
 					<Experience ref={controls} />
-
-					{/* <Perf /> */}
 				</Canvas>
 			</div>
 		</>

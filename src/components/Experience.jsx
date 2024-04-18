@@ -1,4 +1,4 @@
-import { Bounds } from '@react-three/drei';
+import { Bounds, Html } from '@react-three/drei';
 import Room from './Room';
 import Carpet from './Carpet';
 import Logos from './Logos';
@@ -13,7 +13,8 @@ import { Mug } from './Mug';
 import Chair from './Chair';
 import Annotations from './Annotations';
 import SelectToZoom from './SelectToZoom';
-import React ,{ forwardRef } from 'react';
+import React, { forwardRef } from 'react';
+import AboutIndex from './AboutIndex';
 
 const Experience = forwardRef(({ children }, ref) => {
 	return (
@@ -46,7 +47,6 @@ const Experience = forwardRef(({ children }, ref) => {
 					<SelectToZoom>
 						<Guitar />
 					</SelectToZoom>
-					<Laptop />
 					<Chair />
 					<Mug />
 					<Book />
@@ -58,7 +58,7 @@ const Experience = forwardRef(({ children }, ref) => {
 				</group>
 			</Bounds>
 			<Annotations ref={ref} />
-
+			<Laptop />
 			<Room />
 			<Outer />
 			{/* <CameraPositionLogger /> */}

@@ -26,8 +26,6 @@ const Navbar = React.forwardRef((props, ref) => {
 		},
 	];
 
-	
-
 	const handleButtonClick = (nav) => {
 		if (nav.position && nav.target) {
 			gsap.to(ref.current.object.position, {
@@ -48,21 +46,23 @@ const Navbar = React.forwardRef((props, ref) => {
 	};
 
 	return (
-		<header className="w-full py-5 sm:px-10 px-5 flex justify-between items-center tracking-tight uppercase">
-			<nav className="flex w-full screen-max-width ">
-				<div className="flex flex-1 justify-center gap-0 lg:gap-12 text-sm lg:text-base ">
-					{navList.map((nav, label) => (
-						<div
-							onClick={() => handleButtonClick(nav)}
-							className="flex items-center px-4 p-1 cursor-pointer hover:text-zinc-300 transition-all"
-							key={label}
-						>
-							{nav.label} {/* Render the label */}
-						</div>
-					))}
-				</div>
-			</nav>
-		</header>
+		<>
+			<header className="w-full py-5 sm:px-10 px-5 flex justify-between items-center tracking-tight uppercase">
+				<nav className="flex w-full screen-max-width ">
+					<div className="flex flex-1 justify-center gap-0 lg:gap-12 text-sm lg:text-base ">
+						{navList.map((nav, label) => (
+							<div
+								onClick={() => handleButtonClick(nav)}
+								className="flex items-center px-4 p-1 cursor-pointer hover:text-zinc-300 transition-all"
+								key={label}
+							>
+								{nav.label} {/* Render the label */}
+							</div>
+						))}
+					</div>
+				</nav>
+			</header>
+		</>
 	);
 });
 
