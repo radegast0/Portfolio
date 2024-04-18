@@ -5,6 +5,7 @@ import '../styles/annotation.css';
 import { useThree } from '@react-three/fiber';
 
 const Annotation = ({
+	onClick,
 	position,
 	selected,
 	title,
@@ -32,6 +33,7 @@ const Annotation = ({
 				occlude
 			>
 				<div
+					onClick={onClick}
 					onMouseEnter={() => {
 						handleOpen();
 					}}

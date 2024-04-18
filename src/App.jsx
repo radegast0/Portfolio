@@ -34,7 +34,7 @@ const App = () => {
 						minDistance={1}
 					/>
 
-					<Experience />
+					<Experience ref={controls} />
 
 					{/* <Perf /> */}
 				</Canvas>

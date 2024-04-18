@@ -13,8 +13,9 @@ import { Mug } from './Mug';
 import Chair from './Chair';
 import Annotations from './Annotations';
 import SelectToZoom from './SelectToZoom';
+import React ,{ forwardRef } from 'react';
 
-const Experience = () => {
+const Experience = forwardRef(({ children }, ref) => {
 	return (
 		<>
 			{/* <CameraControls
@@ -56,13 +57,13 @@ const Experience = () => {
 					<Amp />
 				</group>
 			</Bounds>
-			<Annotations />
+			<Annotations ref={ref} />
 
 			<Room />
 			<Outer />
 			{/* <CameraPositionLogger /> */}
 		</>
 	);
-};
+});
 
 export default Experience;
