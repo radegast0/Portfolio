@@ -5,15 +5,17 @@ import {
 	OrbitControls,
 	PerspectiveCamera,
 } from '@react-three/drei';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 const App = () => {
 	const controls = useRef(null);
+	const [isAbout, setIsAbout] = useState(false);
+	console.log(isAbout);
 	return (
 		<>
 			<div className="fixed top-0 left-0 w-screen h-screen z-0">
 				<div className="fixed top-0 left-0 right-0 z-10">
-					<Main ref={controls} />
+					<Main setIsAbout={setIsAbout} ref={controls} />
 				</div>
 				<Canvas
 					flat={true}
@@ -36,7 +38,7 @@ const App = () => {
 						minDistance={1}
 					/>
 
-					<Experience ref={controls} />
+					<Experience isAbout={isAbout} ref={controls} />
 				</Canvas>
 			</div>
 		</>

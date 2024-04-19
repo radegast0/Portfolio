@@ -4,6 +4,7 @@ export default function Chair(props) {
 	const { nodes, materials, position } = useGLTF('./models/chair.glb');
 	return (
 		<group
+			position={[0.1,0,0]}
 			{...props}
 			dispose={null}
 		>

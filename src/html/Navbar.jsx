@@ -1,7 +1,8 @@
 import React from 'react';
 import gsap from 'gsap';
 
-const Navbar = React.forwardRef((props, ref) => {
+const Navbar = React.forwardRef(({ setIsAbout }, ref) => {
+
 	const navList = [
 		{
 			label: 'Home',
@@ -43,7 +44,12 @@ const Navbar = React.forwardRef((props, ref) => {
 				ease: 'power4.inOut',
 			});
 		}
-	};
+		if (nav.label === 'About') {
+			setIsAbout(true);
+		} else {
+			setIsAbout(false);
+		}
+	};	
 
 	return (
 		<>

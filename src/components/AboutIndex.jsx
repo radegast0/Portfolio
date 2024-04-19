@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 
 const AboutIndex = () => {
-	const isAbout = true;
 	return (
 		<>
-			<div className="text-black border-4 overflow-y-scroll overflow-x-auto w-[900px] h-[490px] touch-pan-y">
-				<div className="p-4 flex flex-col gap-8 text-[#141E46]">
+			<div className={`text-slate-50 bg-slate-950 overflow-auto w-[938px] h-[532px] touch-pan-y ${screen.width < 1280 ? 'scrollbar' : ''}`}>
+				<div className="p-4 flex flex-col gap-8 ">
 					<div className="flex flex-col gap-0">
 						<h1 className="text-7xl">Fatih Yonucuoğlu</h1>
 						<h1 className="text-xl">Web & Software Developer</h1>

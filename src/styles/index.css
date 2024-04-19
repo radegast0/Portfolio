@@ -25,3 +25,11 @@ body {
 canvas {
 	@apply cursor-grab active:cursor-grabbing;
 }
+
+  .scrollbar::-webkit-scrollbar {
+	width: 18px;
+	background-color: #aaaaaa; /* or add it to the track */
+  }
+  .scrollbar::-webkit-scrollbar-thumb {
+	background: #222222;
+  }

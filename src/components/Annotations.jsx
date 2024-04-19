@@ -20,7 +20,7 @@ const Annotations = React.forwardRef((props, ref) => {
 			targetPosition: { x: -6.6, y: 2.4, z: 1.5 },
 		},
 		{
-			position: [-6, 4.3, -6],
+			position: [-6, 3.3, -6],
 			selected: 3,
 			title: 'Skills',
 			childSelected: 2,

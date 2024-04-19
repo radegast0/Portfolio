@@ -15,20 +15,9 @@ import Annotations from './Annotations';
 import SelectToZoom from './SelectToZoom';
 import React, { forwardRef } from 'react';
 
-const Experience = forwardRef(({ children }, ref) => {
+const Experience = forwardRef(({ isAbout }, ref) => {
 	return (
 		<>
-			{/* <CameraControls
-				dollySpeed={0.4}
-				maxDistance={distance}
-				minDistance={4}
-				maxPolarAngle={Math.PI / 2.4}
-				minPolarAngle={Math.PI / 8}
-				minAzimuthAngle={-Math.PI / 1}
-				maxAzimuthAngle={Math.PI / 1}
-				truckSpeed={1}
-			/> */}
-
 			<color
 				args={['#030202']}
 				attach="background"
@@ -41,6 +30,8 @@ const Experience = forwardRef(({ children }, ref) => {
 			<Bounds
 				fit
 				observe
+				near={5}
+				far={100}
 			>
 				<group position={[0, 0, 0]}>
 					<SelectToZoom>
@@ -56,7 +47,7 @@ const Experience = forwardRef(({ children }, ref) => {
 					<Amp />
 				</group>
 			</Bounds>
-			<Laptop />
+			<Laptop isAbout={isAbout} ref={ref} />
 			<Annotations ref={ref} />
 			<Room />
 			<Outer />
