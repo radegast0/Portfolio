@@ -13,8 +13,8 @@ const Navbar = React.forwardRef(({ setIsAbout }, ref) => {
 		{
 			label: 'About',
 			position:
-				screen.width < 1280 ? { x: 1, y: 4, z: -6.5 } : { x: 0, y: 3, z: -6 },
-			target: { x: -2, y: 2.8, z: -5.3 },
+				screen.width < 1280 ? { x: 1, y: 3.5, z: -6.35 } : { x: 0, y: 3.3, z: -6.0 },
+			target: { x: -2, y: 2.8, z: -5.45 },
 		},
 		{
 			label: 'Skills',

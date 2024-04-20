@@ -7,7 +7,7 @@ const PositionHelpers = () => {
             <boxGeometry args={[0.1, 0.1, 0.1]} />
             <meshStandardMaterial color="hotpink" />
         </mesh>
-        <mesh position={[-1, 3.5, -5.8]}>
+        <mesh position={[-0, 3.3, -6.1]}>
             <boxGeometry args={[0.1, 0.1, 0.1]} />
             <meshStandardMaterial color="hotpink" />
         </mesh>

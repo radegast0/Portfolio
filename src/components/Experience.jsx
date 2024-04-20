@@ -20,8 +20,8 @@ import { gsap } from 'gsap';
 const Experience = forwardRef(({ isAbout }, ref) => {
 	useEffect(() => {
 		gsap.to(ref.current.object.position, {
-			delay: .1,
-			duration: 1,
+			delay: 0.1,
+			duration: 1.8,
 			x: screen.width < 1280 ? 24 : 10,
 			y: screen.width < 1280 ? 12 : 6,
 			z: screen.width < 1280 ? 32 : 15,
@@ -32,11 +32,9 @@ const Experience = forwardRef(({ isAbout }, ref) => {
 			x: -2,
 			y: 1,
 			z: -2,
-			ease: 'power4.inOut',
+			ease: 'none',
 		});
 	}, [ref]);
-
-	console.log(ref.current?.object?.position);
 
 	return (
 		<>
@@ -72,8 +70,8 @@ const Experience = forwardRef(({ isAbout }, ref) => {
 			<Annotations ref={ref} />
 			<Room />
 			<Outer />
-			<PositionHelpers />
 
+			{/* <PositionHelpers /> */}
 			{/* <CameraPositionLogger /> */}
 		</>
 	);

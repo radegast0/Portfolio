@@ -2,7 +2,6 @@ import { Html } from '@react-three/drei';
 import { svgs } from '../utils/svg';
 import { useState } from 'react';
 import '../styles/annotation.css';
-import { useThree } from '@react-three/fiber';
 
 const Annotation = ({
 	onClick,

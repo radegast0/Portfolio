@@ -1,12 +1,10 @@
 .annotation > div {
-	@apply 
-        bg-[#00000088]
+	@apply bg-[#00000088]
         whitespace-nowrap
         overflow-hidden
         rounded-3xl
         select-none hover:border-2 border-[3px] md:border-2
         border-zinc-300
         hover:bg-[#000000CC]
-        cursor-pointer
-    ;
+        cursor-pointer;
 }
