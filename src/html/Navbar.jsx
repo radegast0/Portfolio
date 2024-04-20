@@ -1,8 +1,8 @@
 import React from 'react';
 import gsap from 'gsap';
+import { svgs } from '../utils/svg';
 
 const Navbar = React.forwardRef(({ setIsAbout }, ref) => {
-
 	const navList = [
 		{
 			label: 'Home',
@@ -14,7 +14,7 @@ const Navbar = React.forwardRef(({ setIsAbout }, ref) => {
 			label: 'About',
 			position:
 				screen.width < 1280 ? { x: 1, y: 4, z: -6.5 } : { x: 0, y: 3, z: -6 },
-			target: { x: -1.4, y: 2.7, z: -5.6 },
+			target: { x: -2, y: 2.8, z: -5.3 },
 		},
 		{
 			label: 'Skills',
@@ -49,20 +49,33 @@ const Navbar = React.forwardRef(({ setIsAbout }, ref) => {
 		} else {
 			setIsAbout(false);
 		}
-	};	
+	};
 
 	return (
 		<>
 			<header className="w-full py-5 sm:px-10 px-5 flex justify-between items-center tracking-tight uppercase">
 				<nav className="flex w-full screen-max-width ">
-					<div className="flex flex-1 justify-center gap-0 lg:gap-12 text-sm lg:text-base ">
+					<div className="flex flex-1 justify-center gap-0 lg:gap-12">
 						{navList.map((nav, label) => (
 							<div
 								onClick={() => handleButtonClick(nav)}
-								className="flex items-center px-4 p-1 cursor-pointer hover:text-zinc-300 transition-all"
+								className="flex items-center px-4 p-1 cursor-pointer hover:text-zinc-300 lg:text-xl transition-all"
 								key={label}
 							>
-								{nav.label} {/* Render the label */}
+								{nav.label === 'Contact' ? (
+									<>
+										<a
+											className="flex items-center"
+											target="_blank"
+											href="https://docs.google.com/forms/d/e/1FAIpQLScjKWKeohtRaUrtlzvJwkaIKbXJMPaEfrVtdhFMUt9l3RaZaQ/viewform"
+										>
+											{nav.label}
+											<span className="scale-90 lg:ml-1">{svgs[2]}</span>
+										</a>
+									</>
+								) : (
+									nav.label
+								)}
 							</div>
 						))}
 					</div>

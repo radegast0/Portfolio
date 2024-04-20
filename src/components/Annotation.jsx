@@ -11,10 +11,9 @@ const Annotation = ({
 	title,
 	children,
 	childSelected,
-	distanceFactor = 10,
 }) => {
 	const [isOpen, setIsOpen] = useState(false);
-	const camera = useThree((state) => state.camera);
+	const distanceFactor = screen.width < 1280 ? 12 : undefined;
 
 	const handleOpen = () => {
 		setIsOpen(true);
@@ -28,9 +27,9 @@ const Annotation = ({
 			<Html
 				position={position}
 				wrapperClass="annotation"
-				distanceFactor={distanceFactor}
 				center
 				occlude
+				distanceFactor={distanceFactor}
 			>
 				<div
 					onClick={onClick}
