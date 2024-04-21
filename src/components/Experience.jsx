@@ -16,6 +16,7 @@ import SelectToZoom from './SelectToZoom';
 import React, { forwardRef, useEffect } from 'react';
 import PositionHelpers from '../utils/PositionHelpers';
 import { gsap } from 'gsap';
+import TvScreen from './TvScreen';
 
 const Experience = forwardRef(({ isAbout }, ref) => {
 	useEffect(() => {
@@ -49,11 +50,7 @@ const Experience = forwardRef(({ isAbout }, ref) => {
 			/>
 
 			<group position={[0, 0, 0]}>
-				<Bounds observe>
-					<SelectToZoom>
-						<Guitar />
-					</SelectToZoom>
-				</Bounds>
+				<Guitar />
 				<Chair />
 				<Mug />
 				<Book />
@@ -70,7 +67,6 @@ const Experience = forwardRef(({ isAbout }, ref) => {
 			<Annotations ref={ref} />
 			<Room />
 			<Outer />
-
 			{/* <PositionHelpers /> */}
 			{/* <CameraPositionLogger /> */}
 		</>

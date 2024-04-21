@@ -1,5 +1,7 @@
 varying vec2 vUv;
 uniform float uTime;
+uniform vec3 uColorStart;
+uniform vec3 uColorEnd;
 
 vec4 permute(vec4 x){ return mod(((x*34.0)+1.0)*x, 289.0); }
 vec4 taylorInvSqrt(vec4 r){ return 1.79284291400159 - 0.85373472095314 * r; }
@@ -76,7 +78,17 @@ float cnoise(vec3 P)
 }
 
 void main(){
-    float strength = cnoise(vec3(vUv.x * 15.0, vUv.y * 15.0, uTime));
-    gl_FragColor = vec4(strength, strength, strength, 1.0);
+    vec2 displacedUv = vUv + cnoise(vec3(vUv.x * 5.0, vUv.y * 5.0, uTime * 0.2));
+
+    float strength = cnoise(vec3(displacedUv.x * 5.0, displacedUv.y * 5.0, uTime * 0.2));
+
+    float outerGlow = distance(vUv, vec2(0.5)) * 5.0 - 1.4;
+    strength += outerGlow;
+
+    strength += step(-0.2, strength) * 0.6;
+
+    vec3 color = mix(uColorStart, uColorEnd, strength);
+
+    gl_FragColor = vec4(color, 1.0);
      #include <colorspace_fragment>
 }
