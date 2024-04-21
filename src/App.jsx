@@ -28,7 +28,7 @@ const App = () => {
 						minPolarAngle={Math.PI / 8}
 						minAzimuthAngle={-Math.PI / 1}
 						maxAzimuthAngle={Math.PI / 1}
-						enablePan={false}
+						// enablePan={false}
 						makeDefault
 						enableZoom={true}
 						maxDistance={window.innerWidth < 1280 ? 43 : 35}
