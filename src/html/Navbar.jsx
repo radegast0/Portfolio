@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { svgs } from '../utils/svg';
+import { useGSAP } from '@gsap/react';
 
 const Navbar = React.forwardRef(({ setIsAbout }, ref) => {
+	useGSAP(() => {
+		gsap.from('.nav-item', {
+			delay: .8,
+			opacity: 1,
+			duration: 1,
+			y: -50,
+			ease: 'power4.inOut',
+		});
+	});
+
 	const navList = [
 		{
 			label: 'Home',
@@ -13,7 +24,9 @@ const Navbar = React.forwardRef(({ setIsAbout }, ref) => {
 		{
 			label: 'About',
 			position:
-				screen.width < 1280 ? { x: 1, y: 3.5, z: -6.35 } : { x: 0, y: 3.3, z: -6.0 },
+				screen.width < 1280
+					? { x: 1, y: 3.5, z: -6.35 }
+					: { x: 0, y: 3.3, z: -6.0 },
 			target: { x: -2, y: 2.8, z: -5.45 },
 		},
 		{
@@ -53,7 +66,7 @@ const Navbar = React.forwardRef(({ setIsAbout }, ref) => {
 
 	return (
 		<>
-			<header className="w-full py-5 sm:px-10 px-5 flex justify-between items-center uppercase">
+			<header className="w-full nav-item py-5 sm:px-10 px-5 flex justify-between items-center uppercase">
 				<nav className="flex w-full screen-max-width ">
 					<div className="flex flex-1 justify-center gap-0 lg:gap-12">
 						{navList.map((nav, label) => (

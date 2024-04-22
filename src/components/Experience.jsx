@@ -1,4 +1,3 @@
-import { Bounds, Html } from '@react-three/drei';
 import Room from './Room';
 import Carpet from './Carpet';
 import Logos from './Logos';
@@ -12,11 +11,9 @@ import Curtain from './Curtain';
 import { Mug } from './Mug';
 import Chair from './Chair';
 import Annotations from './Annotations';
-import SelectToZoom from './SelectToZoom';
 import React, { forwardRef, useEffect } from 'react';
-import PositionHelpers from '../utils/PositionHelpers';
 import { gsap } from 'gsap';
-import TvScreen from './TvScreen';
+import Bmo from './Bmo';
 
 const Experience = forwardRef(({ isAbout }, ref) => {
 	useEffect(() => {
@@ -40,7 +37,7 @@ const Experience = forwardRef(({ isAbout }, ref) => {
 	return (
 		<>
 			<color
-				args={['black']}
+				args={['#413A6F']}
 				attach="background"
 			/>
 			<ambientLight intensity={1.5} />
@@ -60,6 +57,7 @@ const Experience = forwardRef(({ isAbout }, ref) => {
 				<WallLight />
 				<Amp />
 			</group>
+			<Bmo />
 			<Laptop
 				isAbout={isAbout}
 				ref={ref}
