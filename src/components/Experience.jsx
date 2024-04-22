@@ -13,7 +13,6 @@ import Chair from './Chair';
 import Annotations from './Annotations';
 import React, { forwardRef, useEffect } from 'react';
 import { gsap } from 'gsap';
-import Bmo from './Bmo';
 
 const Experience = forwardRef(({ isAbout }, ref) => {
 	useEffect(() => {
@@ -57,7 +56,6 @@ const Experience = forwardRef(({ isAbout }, ref) => {
 				<WallLight />
 				<Amp />
 			</group>
-			<Bmo />
 			<Laptop
 				isAbout={isAbout}
 				ref={ref}
