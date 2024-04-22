@@ -1,7 +1,7 @@
 import { Canvas } from '@react-three/fiber';
 import Experience from './components/Experience';
 import Main from './html/Main';
-import { OrbitControls } from '@react-three/drei';
+import { Loader, OrbitControls } from '@react-three/drei';
 import { useRef, useState } from 'react';
 
 const App = () => {
@@ -40,6 +40,7 @@ const App = () => {
 						ref={controls}
 					/>
 				</Canvas>
+				<Loader />
 			</div>
 		</>
 	);

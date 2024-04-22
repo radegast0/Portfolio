@@ -17,8 +17,7 @@ import { gsap } from 'gsap';
 const Experience = forwardRef(({ isAbout }, ref) => {
 	useEffect(() => {
 		gsap.to(ref.current.object.position, {
-			delay: 0.1,
-			duration: 1.8,
+			duration: 1.5,
 			x: screen.width < 1280 ? 24 : 10,
 			y: screen.width < 1280 ? 12 : 6,
 			z: screen.width < 1280 ? 32 : 15,
@@ -44,7 +43,6 @@ const Experience = forwardRef(({ isAbout }, ref) => {
 				intensity={3}
 				position={[0, 5, 1]}
 			/>
-
 			<group position={[0, 0, 0]}>
 				<Guitar />
 				<Chair />
@@ -55,13 +53,13 @@ const Experience = forwardRef(({ isAbout }, ref) => {
 				<Carpet />
 				<WallLight />
 				<Amp />
+				<Laptop
+					isAbout={isAbout}
+					ref={ref}
+				/>
+				<Annotations ref={ref} />
+				<Room />
 			</group>
-			<Laptop
-				isAbout={isAbout}
-				ref={ref}
-			/>
-			<Annotations ref={ref} />
-			<Room />
 			<Outer />
 			{/* <PositionHelpers /> */}
 			{/* <CameraPositionLogger /> */}
