@@ -20,7 +20,7 @@ const App = () => {
 				<Canvas
 					flat={true}
 					shadows
-					camera={{ fov: 50 }}
+					camera={{ fov: 70 }}
 				>
 					<OrbitControls
 						ref={controls}
@@ -31,7 +31,7 @@ const App = () => {
 						enablePan={false}
 						makeDefault
 						enableZoom={true}
-						maxDistance={window.innerWidth < 1280 ? 43 : 35}
+						maxDistance={window.innerWidth < 1280 ? 35 : 25}
 						minDistance={1}
 					/>
 

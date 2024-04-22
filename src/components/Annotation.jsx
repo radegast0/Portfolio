@@ -38,28 +38,16 @@ const Annotation = ({
 					onMouseLeave={() => {
 						handleClose();
 					}}
-					className={
-						isOpen
-							? `py-6 px-6 transition-all duration-150`
-							: 'p-3 transition-all duration-150'
-					}
+					className={isOpen ? `p-4 transition-all ` : 'p-2 transition-all '}
 				>
-					<div
-						className={
-							isOpen
-								? `rounded-none transition-all duration-150`
-								: 'transition-all duration-150'
-						}
-					>
-						<span className="flex flex-row gap-3 items-center justify-center">
+					<div>
+						<span className="flex gap-3 items-center">
 							{isOpen ? title : '' || null} {svgs[selected]}
 						</span>
 						{isOpen ? (
-							<div className={children ? `mt-2` : null}>
-								<div className="flex flex-row items-center">
-									{children}
-									{svgs[childSelected]}
-								</div>
+							<div className={childSelected ? `flex mt-2` : null}>
+								{children}
+								{svgs[childSelected]}
 							</div>
 						) : null}
 					</div>

@@ -6,7 +6,7 @@ import { useGSAP } from '@gsap/react';
 const Navbar = React.forwardRef(({ setIsAbout }, ref) => {
 	useGSAP(() => {
 		gsap.from('.nav-item', {
-			delay: .8,
+			delay: 0.8,
 			opacity: 1,
 			duration: 1,
 			y: -50,
@@ -18,22 +18,22 @@ const Navbar = React.forwardRef(({ setIsAbout }, ref) => {
 		{
 			label: 'Home',
 			position:
-				screen.width < 1280 ? { x: 24, y: 12, z: 32 } : { x: 10, y: 6, z: 15 },
+				screen.width < 1280 ? { x: 6, y: 12, z: 18 } : { x: 4, y: 6, z: 8 },
 			target: { x: -2, y: 1, z: -2 },
 		},
 		{
 			label: 'About',
 			position:
 				screen.width < 1280
-					? { x: 1, y: 3.5, z: -6.35 }
-					: { x: 0, y: 3.3, z: -6.0 },
+					? { x: 0.5, y: 3.4, z: -6.2 }
+					: { x: -0.5, y: 3, z: -5.84 },
 			target: { x: -2, y: 2.8, z: -5.45 },
 		},
 		{
 			label: 'Skills',
 			position:
-				screen.width < 1280 ? { x: 0, y: 8, z: 0 } : { x: -3.3, y: 4.25, z: -3.4 },
-			target: { x: -3.4, y: 4.2, z: -3.5 },
+				screen.width < 1280 ? { x: 0, y: 8, z: 0 } : { x: -3.5, y: 3.5, z: -3.5 },
+			target: { x: -5, y: 3, z: -5 },
 		},
 		{
 			label: 'Contact',

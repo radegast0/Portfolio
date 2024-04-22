@@ -13,14 +13,15 @@ import Chair from './Chair';
 import Annotations from './Annotations';
 import React, { forwardRef, useEffect } from 'react';
 import { gsap } from 'gsap';
+import Dino from './Dino';
 
 const Experience = forwardRef(({ isAbout }, ref) => {
 	useEffect(() => {
 		gsap.to(ref.current.object.position, {
 			duration: 1.5,
-			x: screen.width < 1280 ? 24 : 10,
+			x: screen.width < 1280 ? 6 : 4,
 			y: screen.width < 1280 ? 12 : 6,
-			z: screen.width < 1280 ? 32 : 15,
+			z: screen.width < 1280 ? 18 : 8,
 			ease: 'power4.inOut',
 		});
 		gsap.to(ref.current.target, {
@@ -59,6 +60,7 @@ const Experience = forwardRef(({ isAbout }, ref) => {
 				/>
 				<Annotations ref={ref} />
 				<Room />
+				<Dino />
 			</group>
 			<Outer />
 			{/* <PositionHelpers /> */}
