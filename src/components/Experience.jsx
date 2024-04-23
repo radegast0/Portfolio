@@ -14,7 +14,6 @@ import Annotations from './Annotations';
 import React, { forwardRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import Dino from './Dino';
-import { LaptopScreen } from './LaptopScreen';
 
 const Experience = forwardRef(({ isAbout }, ref) => {
 	useEffect(() => {
@@ -59,7 +58,6 @@ const Experience = forwardRef(({ isAbout }, ref) => {
 					isAbout={isAbout}
 					ref={ref}
 				/>
-				<LaptopScreen />
 				<Annotations ref={ref} />
 				<Room />
 				<Dino />
