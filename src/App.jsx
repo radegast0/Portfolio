@@ -1,7 +1,7 @@
 import { Canvas } from '@react-three/fiber';
 import Experience from './components/Experience';
 import Main from './html/Main';
-import { Loader, OrbitControls, useProgress } from '@react-three/drei';
+import { OrbitControls, useProgress } from '@react-three/drei';
 import { useRef, useState } from 'react';
 import LoadingScreen from './components/LoadingScreen';
 
@@ -9,23 +9,6 @@ const App = () => {
 	const controls = useRef(null);
 	const [isAbout, setIsAbout] = useState(false);
 	const { active } = useProgress();
-	// const container = {
-	// 	background: '#03030E',
-	// };
-	// const inner = {
-	// 	background: 'rgb(15 23 42)',
-	// 	height: '12px',
-	// 	width: '140px',
-	// };
-	// const data = {
-	// 	fontFamily: 'kode, sans-serif',
-	// 	textAlign: 'start',
-	// 	fontSize: '12px',
-	// 	letterSpacing: '0.1em',
-	// };
-	// const bar = {
-	// 	height: '12px',
-	// };
 
 	return (
 		<>
@@ -56,7 +39,6 @@ const App = () => {
 						maxDistance={window.innerWidth < 1280 ? 35 : 25}
 						minDistance={1}
 					/>
-
 					<Experience
 						isAbout={isAbout}
 						ref={controls}
