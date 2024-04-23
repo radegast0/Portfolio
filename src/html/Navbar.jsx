@@ -6,7 +6,7 @@ import { useGSAP } from '@gsap/react';
 const Navbar = React.forwardRef(({ setIsAbout }, ref) => {
 	useGSAP(() => {
 		gsap.from('.nav-item', {
-			delay: 1.5,
+			delay: 1,
 			opacity: 1,
 			duration: 1,
 			y: -50,
