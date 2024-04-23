@@ -1,35 +1,41 @@
 @font-face {
 	font-family: 'kode';
 	src: url('../fonts/Kode_Mono/KodeMono-VariableFont_wght.ttf');
-}
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-* {
+  }
+  
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+  
+  * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-}
-
-html {
-	background-color: #03030E;
-}
-
-
-
-body {
-	@apply block w-dvw overflow-x-hidden h-full select-none font-kodemono touch-none text-white
-}
-canvas {
+  }
+  
+  html {
+	background-color: #03030e;
+  }
+  
+  body {
+	height: 100vh;
+	@apply block w-dvw overflow-x-hidden h-full select-none font-kodemono touch-none text-white;
+  }
+  @supports (height: 100lvh) {
+	body {
+	  height: 100lvh;
+	}
+  }
+  
+  canvas {
 	@apply cursor-grab active:cursor-grabbing;
-}
-
+  }
+  
   .scrollbar::-webkit-scrollbar {
 	width: 18px;
-	background-color: #aaaaaa; /* or add it to the track */
+	background-color: #aaaaaa;
   }
   .scrollbar::-webkit-scrollbar-thumb {
 	background: #222222;
   }
+  

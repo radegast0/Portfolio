@@ -4,6 +4,7 @@ import Main from './html/Main';
 import { OrbitControls, useProgress } from '@react-three/drei';
 import { useRef, useState } from 'react';
 import LoadingScreen from './components/LoadingScreen';
+import './styles/index.css';
 
 const App = () => {
 	const controls = useRef(null);
@@ -12,7 +13,7 @@ const App = () => {
 
 	return (
 		<>
-			<div className="fixed trac font-kodemono bg-slate-900 font top-0 left-0 w-screen h-screen z-0">
+			<div className="fixed font-kodemono bg-slate-900 font top-0 left-0 w-screen h-screen z-0">
 				{!active && (
 					<div className="fixed top-0 left-0 right-0 z-10">
 						<Main
