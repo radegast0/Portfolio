@@ -18,6 +18,7 @@ import Dino from './Dino';
 const Experience = forwardRef(({ isAbout }, ref) => {
 	useEffect(() => {
 		gsap.to(ref.current.object.position, {
+			delay: 0.2,
 			duration: 1.5,
 			x: screen.width < 1280 ? 6 : 4,
 			y: screen.width < 1280 ? 12 : 6,
@@ -25,6 +26,7 @@ const Experience = forwardRef(({ isAbout }, ref) => {
 			ease: 'power4.inOut',
 		});
 		gsap.to(ref.current.target, {
+			delay: 0.2,
 			duration: 1,
 			x: -2,
 			y: 1,
