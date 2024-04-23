@@ -15,18 +15,7 @@ const Laptop = React.forwardRef(({ isAbout }, ref) => {
 				rotation={[-Math.PI, 1.31913011, -Math.PI]}
 				scale={[0.34308976, 0.3430897, 0.34308976]}
 			>
-				<Html
-					style={{
-						height: '50vh',
-					}}
-					scale={[0.15, 0.151, 0.15]}
-					transform
-					position={[0, 1.40, -1.4117]}
-					rotation-x={-Math.PI / 18}
-					occlude
-				>
-					{isAbout ? <AboutIndex /> : null}
-				</Html>
+				
 				<mesh
 					twoSided={false}
 					geometry={nodes.Object_0006.geometry}
