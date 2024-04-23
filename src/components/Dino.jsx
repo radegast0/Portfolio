@@ -1,5 +1,4 @@
-
-import React, { useRef } from 'react';
+import React from 'react';
 import { useGLTF, useAnimations } from '@react-three/drei';
 import { useEffect } from 'react';
 
@@ -10,10 +9,9 @@ export default function Dino(props) {
 
 	useEffect(() => {
 		const action = animations.actions["AnimationStack"];
-		action.fadeIn(1.5).play();
+		action.play();
 	}, []);
 
-	console.log(animations);
 
 	return (
 		<primitive

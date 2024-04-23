@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Html, useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
-import AboutIndex from './AboutIndex';
+import AboutIndex from '../html/AboutIndex';
 
 const Laptop = React.forwardRef(({ isAbout }, ref) => {
 	const { nodes, materials } = useGLTF('./models/laptop.glb');

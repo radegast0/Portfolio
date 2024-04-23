@@ -47,7 +47,7 @@ const AboutIndex = () => {
 					<a
 						target="_blank"
 						href="https://docs.google.com/forms/d/e/1FAIpQLScjKWKeohtRaUrtlzvJwkaIKbXJMPaEfrVtdhFMUt9l3RaZaQ/viewform?usp=sf_link"
-						className="text-2xl text-end underline"
+						className="text-2xl w-fit underline"
 					>
 						Contact form
 					</a>
