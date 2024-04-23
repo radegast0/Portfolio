@@ -21,6 +21,7 @@
 	height: 100vh;
 	@apply block w-dvw overflow-x-hidden h-full select-none font-kodemono touch-none text-white;
   }
+  
   @supports (height: 100lvh) {
 	body {
 	  height: 100lvh;

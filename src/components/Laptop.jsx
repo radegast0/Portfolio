@@ -17,11 +17,11 @@ const Laptop = React.forwardRef(({ isAbout }, ref) => {
 			>
 				<Html
 					style={{
-						height: '100vh',
+						height: '50vh',
 					}}
 					scale={[0.15, 0.151, 0.15]}
 					transform
-					position={[0, 0.515, -1.2555]}
+					position={[0, 1.40, -1.4117]}
 					rotation-x={-Math.PI / 18}
 					occlude
 				>
