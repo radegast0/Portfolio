@@ -28,7 +28,7 @@ const LoadingScreen = () => {
 										></div>
 									</div>
 								</div>
-								<h1 className="text-5xl lg:text-6xl tracking-tighter">
+								<h1 className="text-5xl mx-auto lg:text-6xl tracking-tighter">
 									{progress.toFixed(progress < 100 ? 2 : 1)}%
 								</h1>
 							</div>
