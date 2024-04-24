@@ -13,7 +13,7 @@ const App = () => {
 
 	return (
 		<>
-			<div className="fixed font-kodemono bg-slate-900 test font top-0 left-0 z-0">
+			<div className="font-kodemono bg-slate-900 test font top-0 left-0 z-0">
 				{!active && (
 					<div className="fixed top-0 left-0 right-0 z-10">
 						<Main
@@ -23,7 +23,7 @@ const App = () => {
 					</div>
 				)}
 				<Canvas
-					className="touch-none"
+					className="touch-none test"
 					flat={true}
 					shadows
 					camera={{ fov: 70 }}
