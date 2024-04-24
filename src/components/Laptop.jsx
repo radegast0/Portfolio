@@ -15,12 +15,12 @@ const Laptop = React.forwardRef(({ isAbout }, ref) => {
 				rotation={[-Math.PI, 1.31913011, -Math.PI]}
 				scale={[0.34308976, 0.3430897, 0.34308976]}
 			>
-				<Html
+				<Html	
 					transform
 					distanceFactor={1.5}
 					position={[0, 1.29, -1.39]}
 					rotation-x={-Math.PI / 18}
-					occlude
+					occlude					
 				>
 					{isAbout ? <AboutIndex /> : null}
 				</Html>

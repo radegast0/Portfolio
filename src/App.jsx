@@ -23,7 +23,7 @@ const App = () => {
 					</div>
 				)}
 				<Canvas
-					className="touch-none test"
+					className="touch-none"
 					flat={true}
 					shadows
 					camera={{ fov: 70 }}

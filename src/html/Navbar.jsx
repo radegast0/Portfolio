@@ -58,7 +58,9 @@ const Navbar = React.forwardRef(({ setIsAbout }, ref) => {
 			});
 		}
 		if (nav.label === 'About') {
-			setIsAbout(true);
+			setTimeout(() => {
+				setIsAbout(true);
+			}, 500);
 		} else {
 			setIsAbout(false);
 		}

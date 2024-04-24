@@ -18,20 +18,16 @@ html {
 }
 
 body {
-	@apply overflow-x-hidden select-none font-kodemono touch-none text-white;
-
+	@apply select-none font-kodemono touch-none text-white;
 }
 @supports (height: 100lvh) {
 	body {
 		height: 100lvh;
 	}
-  canvas {
-    height: 100dvh;
-  }
 }
 
 canvas {
-	@apply cursor-grab active:cursor-grabbing;
+	@apply cursor-grab h-dvh active:cursor-grabbing;
 }
 
 .scrollbar::-webkit-scrollbar {
@@ -41,3 +37,4 @@ canvas {
 .scrollbar::-webkit-scrollbar-thumb {
 	background: #222222;
 }
+
