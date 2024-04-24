@@ -18,7 +18,8 @@ html {
 }
 
 body {
-	@apply block w-dvw overflow-x-hidden h-full select-none font-kodemono touch-none text-white;
+	@apply block w-dvw overflow-x-hidden select-none font-kodemono touch-none text-white;
+  height: 100vh;
 }
 
 .test {
@@ -30,6 +31,9 @@ body {
 	.test {
 		height: 100lvh;
 	}
+  body {
+    height: 100lvh;
+  }
 }
 
 canvas {
