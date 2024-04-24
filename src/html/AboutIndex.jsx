@@ -1,23 +1,20 @@
 import React from 'react';
 
 const AboutIndex = () => {
-	const projects = [
-		{
-			title: 'Graduation Project',
-			description: 'Taking attendance using facial recognition.',
-		},
-		{
-			title: 'Apple Clone',
-			description: 'Landing page includes a cool carousel and 3D iPhone model.',
-		},
-	];
+	// const projects = [
+	// 	{
+	// 		title: 'Graduation Project',
+	// 		description: 'Taking attendance using facial recognition.',
+	// 	},
+	// 	{
+	// 		
+	// 	},
+	// ];
 
 	return (
 		<>
 			<div
-				className={`text-slate-50 bg-slate-950 overflow-auto w-[938px] h-[532px] touch-pan-y ${
-					screen.width < 1280 ? 'scrollbar' : ''
-				}`}
+				className={`text-slate-50 bg-slate-950 overflow-auto w-[938px] h-[532px] touch-none`}
 			>
 				<div className="p-4 flex flex-col gap-8">
 					<div className="flex flex-col gap-0">
@@ -51,7 +48,7 @@ const AboutIndex = () => {
 							</span>
 						</p>
 					</div>
-					<div className="mt-12">
+					{/* <div className="mt-12">
 						<h2 className="text-4xl">Projects</h2>
 						<div className="grid grid-cols-2 gap-4 py-2">
 							{projects.map((project, index) => (
@@ -64,7 +61,7 @@ const AboutIndex = () => {
 								</div>
 							))}
 						</div>
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</>

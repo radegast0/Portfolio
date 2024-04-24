@@ -20,15 +20,22 @@ html {
 body {
 	@apply select-none font-kodemono touch-none text-white;
 }
-@supports (height: 100lvh) {
-	body {
-		height: 100lvh;
+/* @supports (height: 100svh) {
+
+	canvas {
+		height: 100svh;
 	}
-}
+} */
 
 canvas {
 	@apply cursor-grab h-dvh active:cursor-grabbing;
 }
+@media (-webkit-device-pixel-ratio: 3) {
+	canvas {
+		height: 99.1lvh !important;
+	}
+}
+
 
 .scrollbar::-webkit-scrollbar {
 	width: 18px;
@@ -37,4 +44,3 @@ canvas {
 .scrollbar::-webkit-scrollbar-thumb {
 	background: #222222;
 }
-
