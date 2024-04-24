@@ -1,10 +1,10 @@
 import { useGLTF, useTexture } from '@react-three/drei';
 import TvScreen from './TvScreen';
-import AboutIndex from '../html/AboutIndex';
-import { Html } from '@react-three/drei';
-import LaptopScreen from './LaptopScreen';
+
+
 
 const Room = () => {
+
 	const { nodes } = useGLTF('./models/room.glb');
 	const bakedTexture = useTexture('/assets/room-baked-v4.jpg');
 
@@ -32,7 +32,12 @@ const Room = () => {
 				scale={nodes.lampBulb.scale}
 				rotation={nodes.lampBulb.rotation}
 			/>
-			<LaptopScreen />
+			<mesh
+				position={nodes.pcScreen.position}
+				geometry={nodes.pcScreen.geometry}
+				scale={nodes.pcScreen.scale}
+				rotation={nodes.pcScreen.rotation}
+			/>
 			<mesh
 				position={nodes.shelfLight.position}
 				geometry={nodes.shelfLight.geometry}
