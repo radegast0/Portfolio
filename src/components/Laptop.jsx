@@ -26,14 +26,14 @@ const Laptop = React.forwardRef(({ isAbout }, ref) => {
           rotation-x={-Math.PI / 18}
           occlude
         >
-          {/* Render AboutIndex only if the browser is not Safari */}
           {!isSafari && isAbout ? (
             <AboutIndex />
           ) : (
-            <p className="text-4xl text-black">
-              {" "}
-              Currently not supported on Safari.{" "}
-            </p>
+            isSafari && (
+              <p className="text-md mt-44 text-nowrap text-black">
+                Currently not supported on Safari.
+              </p>
+            )
           )}
         </Html>
         <mesh
