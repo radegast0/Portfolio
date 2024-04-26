@@ -27,7 +27,11 @@ const Laptop = React.forwardRef(({ isAbout }, ref) => {
           occlude
         >
           {/* Render AboutIndex only if the browser is not Safari */}
-          {!isSafari && isAbout ? <AboutIndex /> : null}
+          {!isSafari && isAbout ? (
+            <AboutIndex />
+          ) : (
+            <p> Currently not supported on Safari. </p>
+          )}
         </Html>
         <mesh
           twoSided={false}
