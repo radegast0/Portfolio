@@ -7,6 +7,7 @@ export default function Carpet(props) {
   return (
     <group {...props} dispose={null}>
       <mesh
+        receiveShadow
         twoSided={false}
         geometry={nodes.Object_16.geometry}
         material={nodes.Object_16.material}

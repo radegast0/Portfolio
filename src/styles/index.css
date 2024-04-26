@@ -1,46 +1,47 @@
-@font-face {
-	font-family: 'kode';
-	src: url('../fonts/Kode_Mono/KodeMono-VariableFont_wght.ttf');
-}
-
 @tailwind base;
+
+@font-face {
+  font-family: "kode";
+  src: url("../fonts/Kode_Mono/KodeMono-VariableFont_wght.ttf");
+}
+
+@layer components {
+  canvas {
+    @apply h-dvh cursor-grab active:cursor-grabbing;
+  }
+
+  .scrollbar::-webkit-scrollbar {
+    width: 18px;
+    background-color: #aaaaaa;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #222222;
+  }
+}
+
 @tailwind components;
+
+@layer utilities {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    background-color: #03030e;
+  }
+
+  body {
+    @apply touch-none select-none font-kodemono text-white;
+  }
+
+  @media (-webkit-device-pixel-ratio: 3) {
+    canvas {
+      height: 99.1lvh !important;
+    }
+  }
+}
+
 @tailwind utilities;
-
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-html {
-	background-color: #03030e;
-}
-
-body {
-	@apply select-none font-kodemono touch-none text-white;
-}
-/* @supports (height: 100svh) {
-
-	canvas {
-		height: 100svh;
-	}
-} */
-
-canvas {
-	@apply cursor-grab h-dvh active:cursor-grabbing;
-}
-@media (-webkit-device-pixel-ratio: 3) {
-	canvas {
-		height: 99.1lvh !important;
-	}
-}
-
-
-.scrollbar::-webkit-scrollbar {
-	width: 18px;
-	background-color: #aaaaaa;
-}
-.scrollbar::-webkit-scrollbar-thumb {
-	background: #222222;
-}
