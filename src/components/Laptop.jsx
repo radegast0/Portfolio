@@ -28,9 +28,9 @@ const Laptop = React.forwardRef(({ isAbout }, ref) => {
         >
           {/* Render AboutIndex only if the browser is not Safari */}
           {!isSafari && isAbout ? (
-            <AboutIndex />
+            <p className="text-black text-4xl"> Currently not supported on Safari. </p>
           ) : (
-            <p> Currently not supported on Safari. </p>
+            <AboutIndex />
           )}
         </Html>
         <mesh
