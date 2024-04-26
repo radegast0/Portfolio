@@ -11,7 +11,7 @@ export default function Laptop(props) {
   return (
     <>
     <group {...props} dispose={null}>
-      <group position={[-1.364, 2.444, -5.601]} rotation={[3.052, 1.304, -3.055]} scale={0.321}>
+      <group position={[-1.364, 2.444, -5.601]} rotation={[3.052, 1.304, -3.055]}  scale={0.321}>
         <mesh geometry={nodes.Object_0002.geometry} material={materials.body} />
         <mesh geometry={nodes.Object_0002_1.geometry} material={materials.keys_bezel_and_bottom} />
         <mesh geometry={nodes.Object_0002_2.geometry} material={materials.shiny_metal} />

@@ -24,7 +24,7 @@ const Annotation = ({
     <>
       <Html position={position} center occlude distanceFactor={distanceFactor}>
         <div
-          className={`cursor-pointer select-none overflow-hidden whitespace-nowrap rounded-3xl border-[3px] border-zinc-300 bg-[#00000088] hover:border-2 hover:bg-[#000000CC] md:border-2 ${isOpen ? "p-4 transition-all duration-100" : "p-2 transition-all duration-100"}`}
+          className={`cursor-pointer select-none overflow-hidden whitespace-nowrap rounded-3xl border-[3px] border-zinc-300 bg-[#00000088] hover:border-2 hover:bg-[#000000CC] md:border-2 ${isOpen ? "p-4 transition-all duration-100" : "p-2 transition-all duration-100"} touch-none `}
           onClick={onClick}
           onMouseEnter={() => {
             handleOpen();

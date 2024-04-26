@@ -9,23 +9,23 @@ import * as THREE from "three";
 import laptopVertexShader from "../shaders/laptop/vertex.glsl";
 import laptopFragmentShader from "../shaders/laptop/fragment.glsl";
 
-// const LaptopScreenMaterial = shaderMaterial(
-//   {
-//     uTime: 0,
-//     uColorStart: new THREE.Color("#153448"),
-//     uColorEnd: new THREE.Color("#FFEAE3"),
-//   },
-//   laptopVertexShader,
-//   laptopFragmentShader,
-// );
+const LaptopScreenMaterial = shaderMaterial(
+  {
+    uTime: 0,
+    uColorStart: new THREE.Color("#153448"),
+    uColorEnd: new THREE.Color("#FFEAE3"),
+  },
+  laptopVertexShader,
+  laptopFragmentShader,
+);
 
-// extend({ LaptopScreenMaterial });
+extend({ LaptopScreenMaterial });
 
 export default function LaptopScreen(props) {
   const laptopScreenMaterial = useRef();
-  //   useFrame((state, delta) => {
-  //     laptopScreenMaterial.current.uTime = state.clock.elapsedTime * 0.5;
-  //   });
+    useFrame((state, delta) => {
+      laptopScreenMaterial.current.uTime = state.clock.elapsedTime * 0.5;
+    });
   const { nodes, materials } = useGLTF("./models/laptopScreen.glb");
   return (
     <group {...props} dispose={null}>
@@ -35,7 +35,7 @@ export default function LaptopScreen(props) {
         rotation={[-1.531, -0.146, 1.839]}
         scale={0.321}
       >
-        {/* <laptopScreenMaterial ref={laptopScreenMaterial} /> */}
+        <laptopScreenMaterial ref={laptopScreenMaterial} />
       </mesh>
     </group>
   );
