@@ -7,7 +7,7 @@
 
 @layer components {
   canvas {
-    @apply h-dvh cursor-grab active:cursor-grabbing;
+    @apply cursor-grab h-dvh w-dvw active:cursor-grabbing;
   }
 
   .scrollbar::-webkit-scrollbar {
@@ -34,14 +34,9 @@
   }
 
   body {
-    @apply touch-none select-none font-kodemono text-white;
+    @apply h-dvh touch-none select-none font-kodemono text-white;
   }
 
-  @media (-webkit-device-pixel-ratio: 3) {
-    canvas {
-      height: 99.1lvh !important;
-    }
-  }
 }
 
 @tailwind utilities;

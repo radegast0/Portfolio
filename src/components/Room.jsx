@@ -32,12 +32,7 @@ const Room = () => {
 				scale={nodes.lampBulb.scale}
 				rotation={nodes.lampBulb.rotation}
 			/>
-			<mesh
-				position={nodes.pcScreen.position}
-				geometry={nodes.pcScreen.geometry}
-				scale={nodes.pcScreen.scale}
-				rotation={nodes.pcScreen.rotation}
-			/>
+			
 			<mesh
 				position={nodes.shelfLight.position}
 				geometry={nodes.shelfLight.geometry}

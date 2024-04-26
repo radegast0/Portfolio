@@ -1,8 +1,8 @@
 import { useGLTF, useTexture, shaderMaterial } from '@react-three/drei';
 import * as THREE from 'three';
 import { extend, useFrame } from '@react-three/fiber';
-import portalVertexShader from '../shaders/tv/vertex.glsl';
-import portalFragmentShader from '../shaders/tv/fragment.glsl';
+import tvVertexShader from '../shaders/tv/vertex.glsl';
+import tvFragmentShader from '../shaders/tv/fragment.glsl';
 import { useRef } from 'react';
 
 const TvScreenMaterial = shaderMaterial(
@@ -11,8 +11,8 @@ const TvScreenMaterial = shaderMaterial(
 		uColorStart: new THREE.Color('#ffffff'),
 		uColorEnd: new THREE.Color('#912BBC'),
 	},
-	portalVertexShader,
-	portalFragmentShader
+	tvVertexShader,
+	tvFragmentShader
 );
 
 extend({ TvScreenMaterial });

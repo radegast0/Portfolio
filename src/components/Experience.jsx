@@ -16,6 +16,7 @@ import { gsap } from "gsap";
 import Cat from "./Cat";
 import { Bounds } from "@react-three/drei";
 import SelectToZoom from "./SelectToZoom";
+import Table2 from "./Table2";
 
 const Experience = forwardRef(({ isAbout }, ref) => {
   useEffect(() => {
@@ -51,11 +52,12 @@ const Experience = forwardRef(({ isAbout }, ref) => {
         <WallLight />
         <Amp />
         <Cat />
-        <Laptop isAbout={isAbout} ref={ref} />
+        <Laptop isAbout={isAbout} />
         <Room />
         <Annotations ref={ref} />
       </group>
       <Outer />
+      <Table2 />
 
       {/* <PositionHelpers /> */}
       {/* <CameraPositionLogger /> */}

@@ -19,7 +19,7 @@ const App = () => {
             <Main setIsAbout={setIsAbout} ref={controls} />
           </div>
         )}
-        <Canvas flat={true} shadows camera={{ fov: 70 }}>
+        <Canvas flat={true} camera={{ fov: 70 }}>
           <OrbitControls
             ref={controls}
             maxPolarAngle={Math.PI / 2.2}
