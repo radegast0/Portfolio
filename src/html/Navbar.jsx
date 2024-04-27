@@ -68,9 +68,10 @@ const Navbar = React.forwardRef(({ setIsAbout }, ref) => {
         ease: "power4.inOut",
       });
     }
-
     if (nav.label === "About") {
-      setIsAbout(true);
+      setTimeout(() => {
+        setIsAbout(true);
+      }, 750);
     } else {
       setIsAbout(false);
     }

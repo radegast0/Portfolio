@@ -78,7 +78,7 @@ float cnoise(vec3 P)
 }
 
 void main(){
-    vec2 displacedUv = vUv + cnoise(vec3(vUv.x * 6.0, vUv.y * 6.0, uTime * 0.2));
+    vec2 displacedUv = vUv + cnoise(vec3(vUv.x * 8.0, vUv.y * 8.0, uTime * 0.2));
 
     float strength = cnoise(vec3(displacedUv.x * 6.0, displacedUv.y * 6.0, uTime * 0.2));
 
