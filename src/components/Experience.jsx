@@ -52,7 +52,7 @@ const Experience = forwardRef(({ isAbout }, ref) => {
         <WallLight />
         <Amp />
         <Cat />
-        <Laptop isAbout={isAbout} />
+        <Laptop isAbout={isAbout} ref={ref} />
         <Room />
         <Annotations ref={ref} />
       </group>

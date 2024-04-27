@@ -22,22 +22,22 @@ const Navbar = React.forwardRef(({ setIsAbout }, ref) => {
         screen.width < 1280 ? { x: 6, y: 12, z: 18 } : { x: 4, y: 6, z: 8 },
       target: { x: -2, y: 1, z: -2 },
     },
-    // {
-    //   label: "About",
-    //   position:
-    //     screen.width < 1280
-    //       ? { x: 0.5, y: 3.4, z: -6.2 }
-    //       : { x: -0.5, y: 3, z: -5.84 },
-    //   target: { x: -2, y: 2.8, z: -5.45 },
-    // },
     {
-      label: "Projects",
+      label: "About",
       position:
         screen.width < 1280
-          ? { x: -1, y: 4, z: -1.5 }
-          : { x: -3.5, y: 4, z: -1.5 },
-      target: { x: -7, y: 4, z: -1.7 },
+          ? { x: 0.5, y: 3.4, z: -6.2 }
+          : { x: -0.5, y: 3, z: -5.84 },
+      target: { x: -2, y: 2.8, z: -5.45 },
     },
+    // {
+    //   label: "Projects",
+    //   position:
+    //     screen.width < 1280
+    //       ? { x: -1, y: 4, z: -1.5 }
+    //       : { x: -3.5, y: 4, z: -1.5 },
+    //   target: { x: -7, y: 4, z: -1.7 },
+    // },
     {
       label: "Skills",
       position:
@@ -68,10 +68,9 @@ const Navbar = React.forwardRef(({ setIsAbout }, ref) => {
         ease: "power4.inOut",
       });
     }
+
     if (nav.label === "About") {
-      setTimeout(() => {
-        setIsAbout(true);
-      }, 500);
+      setIsAbout(true);
     } else {
       setIsAbout(false);
     }
