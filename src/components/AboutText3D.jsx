@@ -1,4 +1,4 @@
-import { Center, Text } from "@react-three/drei";
+import { Text } from "@react-three/drei";
 
 const aboutTextData = [
   { text: "Fatih Yonucuoğlu", scale: 2.5, position: [-5, 10, 0] },
@@ -24,11 +24,12 @@ const aboutTextData = [
     position: [-1.33, -0.7, 0],
     scale: 0.9,
   },
+
   {
-    text: "Contact Form",
-    position: [13.5, -9, 0],
+    text: "Direct Mail",
+    position: [13.9, -8.5, 0],
     color: "#FFC55A",
-    link: "https://docs.google.com/forms/d/e/1FAIpQLScjKWKeohtRaUrtlzvJwkaIKbXJMPaEfrVtdhFMUt9l3RaZaQ/viewform",
+    link: "mailto:fatih.yonucuoglu@gmail.com",
   },
 ];
 

@@ -8,7 +8,6 @@ import LaptopScreen from "./LaptopScreen";
 import LaptopScreen2 from "./LaptopScreen2";
 
 const Laptop = React.forwardRef(({ isAbout }, ref) => {
-  console.log("isAbout", isAbout);
   const { nodes, materials } = useGLTF("./models/laptop.glb");
   return (
     <group dispose={null}>
@@ -41,7 +40,7 @@ const Laptop = React.forwardRef(({ isAbout }, ref) => {
       {isAbout ? <LaptopScreen2 /> : <LaptopScreen />}
     </group>
   );
-})
+});
 
 export default Laptop;
 useGLTF.preload("./models/laptop.glb");
