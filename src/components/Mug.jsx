@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function Mug(props) {
+export default function Mug(props) {
   const { nodes, materials } = useGLTF('./models/mug.glb')
   return (
     <group {...props} dispose={null}>
