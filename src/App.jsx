@@ -14,7 +14,6 @@ const App = () => {
 
   return (
     <>
-      <Analytics />
       <div className="font left-0 top-0 z-0 bg-slate-900 font-kodemono">
         {!active && (
           <div className="fixed left-0 right-0 top-0 z-10">
@@ -35,6 +34,7 @@ const App = () => {
             minDistance={1}
           />
           <Experience isAbout={isAbout} ref={controls} />
+          <Analytics />
         </Canvas>
         <LoadingScreen />
       </div>
