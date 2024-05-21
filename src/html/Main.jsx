@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 const Main = forwardRef(({ children, setIsAbout }, ref) => {
   return (
     <div>
-      <Navbar  setIsAbout={setIsAbout} ref={ref} />
+      <Navbar setIsAbout={setIsAbout} ref={ref} />
       {children}
     </div>
   );

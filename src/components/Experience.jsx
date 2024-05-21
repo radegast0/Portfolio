@@ -1,5 +1,6 @@
 import React, { forwardRef, useEffect } from "react";
 import { gsap } from "gsap";
+import { Analytics } from "@vercel/analytics/react"
 import Room from "./Room";
 import Carpet from "./Carpet";
 import Logos from "./Logos";
@@ -15,12 +16,11 @@ import Chair from "./Chair";
 import Annotations from "./Annotations";
 import Cat from "./Cat";
 import Table2 from "./Table2";
-import GraduationProject from "./projects/GraduationProject";
-import AppleClone from "./projects/AppleClone";
-import MernEats from "./projects/MernEats";
+
 import Projects from "./Projects";
 
 const Experience = forwardRef(({ isAbout }, ref) => {
+  <Analytics />
   useEffect(() => {
     gsap.to(ref.current.object.position, {
       duration: 1.5,
