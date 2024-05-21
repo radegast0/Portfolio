@@ -15,7 +15,6 @@ const App = () => {
   return (
     <>
       <div className="font left-0 top-0 z-0 bg-slate-900 font-kodemono">
-        <Analytics />
         {!active && (
           <div className="fixed left-0 right-0 top-0 z-10">
             <Main setIsAbout={setIsAbout} ref={controls} />
@@ -37,6 +36,7 @@ const App = () => {
           <Experience isAbout={isAbout} ref={controls} />
         </Canvas>
         <LoadingScreen />
+        <Analytics />
       </div>
     </>
   );
