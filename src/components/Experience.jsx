@@ -16,11 +16,10 @@ import Chair from "./Chair";
 import Annotations from "./Annotations";
 import Cat from "./Cat";
 import Table2 from "./Table2";
-
 import Projects from "./Projects";
 
 const Experience = forwardRef(({ isAbout }, ref) => {
-  <Analytics />
+  
   useEffect(() => {
     gsap.to(ref.current.object.position, {
       duration: 1.5,
@@ -62,7 +61,7 @@ const Experience = forwardRef(({ isAbout }, ref) => {
       <Table2 />
       <Projects />
   
-
+      <Analytics />
       {/* <PositionHelpers /> */}
       {/* <CameraPositionLogger /> */}
     </>
