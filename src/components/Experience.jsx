@@ -1,6 +1,5 @@
 import React, { forwardRef, useEffect } from "react";
 import { gsap } from "gsap";
-import { Analytics } from "@vercel/analytics/react"
 import Room from "./Room";
 import Carpet from "./Carpet";
 import Logos from "./Logos";
@@ -60,8 +59,7 @@ const Experience = forwardRef(({ isAbout }, ref) => {
       <Outer />
       <Table2 />
       <Projects />
-  
-      <Analytics />
+
       {/* <PositionHelpers /> */}
       {/* <CameraPositionLogger /> */}
     </>
