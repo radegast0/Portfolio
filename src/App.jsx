@@ -5,6 +5,7 @@ import { OrbitControls, useProgress } from "@react-three/drei";
 import { useRef, useState } from "react";
 import LoadingScreen from "./components/LoadingScreen";
 import "./styles/index.css";
+import { Analytics } from "@vercel/analytics/react";
 
 const App = () => {
   const controls = useRef(null);
@@ -13,6 +14,7 @@ const App = () => {
 
   return (
     <>
+      <Analytics />
       <div className="font left-0 top-0 z-0 bg-slate-900 font-kodemono">
         {!active && (
           <div className="fixed left-0 right-0 top-0 z-10">
