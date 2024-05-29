@@ -10,10 +10,15 @@ const aboutTextData = [
   },
   {
     text: "Currently a Front-end Intern at",
-    position: [3, 4.2, 0],
+    position: [-1.8, 4.2, 0],
     link: "https://test.org",
   },
-  { text: "Digiole", color: "#FFC55A", position: [15, 4.2, 0] },
+  {
+    text: "Startup Commons",
+    color: "#FFC55A",
+    link: "https://www.startupcommons.org/",
+    position: [12.6, 4.2, 0],
+  },
   {
     text: "With experience in the industry, I am a front-end developer",
     position: [-1, 1, 0],
