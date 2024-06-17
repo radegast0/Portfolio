@@ -9,15 +9,16 @@ const aboutTextData = [
     position: [5.7, 5.5, 0],
   },
   {
-    text: "Currently a Front-end Intern at",
-    position: [-1.8, 4.2, 0],
+    text: "Intern Software Engineer at",
+    position: [-8, 4.2, 0],
     link: "https://test.org",
+    
   },
   {
-    text: "Startup Commons",
+    text: "Istanbul Grand Airport (IGA)",
     color: "#FFC55A",
-    link: "https://www.startupcommons.org/",
-    position: [12.6, 4.2, 0],
+    // link: "",
+    position: [8.9, 4.2, 0],
   },
   {
     text: "With experience in the industry, I am a front-end developer",
