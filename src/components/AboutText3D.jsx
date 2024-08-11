@@ -10,15 +10,14 @@ const aboutTextData = [
   },
   {
     text: "Intern Software Engineer at",
-    position: [-8, 4.2, 0],
+    position: [1.9, 4.2, 0],
     link: "https://test.org",
-    
   },
   {
-    text: "Istanbul Grand Airport (IGA)",
+    text: "GBB Bilisim",
     color: "#FFC55A",
     // link: "",
-    position: [8.9, 4.2, 0],
+    position: [13.8, 4.2, 0],
   },
   {
     text: "With experience in the industry, I am a front-end developer",
