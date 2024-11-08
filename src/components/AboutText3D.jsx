@@ -8,17 +8,17 @@ const aboutTextData = [
     scale: 1,
     position: [5.7, 5.5, 0],
   },
-  {
-    text: "Intern Software Engineer at",
-    position: [1.9, 4.2, 0],
-    link: "https://test.org",
-  },
-  {
-    text: "GBB Bilisim",
-    color: "#FFC55A",
-    // link: "",
-    position: [13.8, 4.2, 0],
-  },
+  // {
+  //   text: "Intern Software Engineer at",
+  //   position: [1.9, 4.2, 0],
+  //   link: "https://test.org",
+  // },
+  // {
+  //   text: "GBB Bilisim",
+  //   color: "#FFC55A",
+  //   // link: "",
+  //   position: [13.8, 4.2, 0],
+  // },
   {
     text: "With experience in the industry, I am a front-end developer",
     position: [-1, 1, 0],

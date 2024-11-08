@@ -58,7 +58,7 @@ const Experience = forwardRef(({ isAbout }, ref) => {
       </group>
       <Outer />
       <Table2 />
-      <Projects />
+      {/* <Projects /> */}
 
       {/* <PositionHelpers /> */}
       {/* <CameraPositionLogger /> */}

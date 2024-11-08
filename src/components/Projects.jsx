@@ -7,12 +7,12 @@ import ProjctsText from "./projects/ProjectsText";
 const Projects = () => {
   return (
     <>
-      <GraduationProject />
-      <AppleClone />
-      <MernEats />
-      <Suspense fallback={null}>
-        <ProjctsText />
-      </Suspense>
+      {/* <GraduationProject /> */}
+      {/* <AppleClone /> */}
+      {/* <MernEats /> */}
+      {/* <Suspense fallback={null}> */}
+      {/* <ProjctsText /> */}
+      {/* </Suspense> */}
     </>
   );
 };
